@@ -199,15 +199,28 @@ def _next_run_id(experiments_path: str):
     return f"run_{len(runs) + 1:03d}"
 
 
-def save_cluster_assignments(pred_clusters: dict, word: str, run_path: Path):
+def save_cluster_assignments(
+    pred_clusters: dict,
+    word: str,
+    run_path: Path,
+    sentences: dict,
+):
     grouped = defaultdict(list)
     for sentence_id, cluster_label in pred_clusters.items():
-        grouped[int(cluster_label)].append(sentence_id)
+        grouped[int(cluster_label)].append(
+            {
+                "id": sentence_id,
+                "text": sentences.get("sentence_id", " "),
+            }
+        )
 
     data = {
         "word": word,
         "clusters": [
-            {"id": cid, "sentence_ids": ids} for cid, ids in sorted(grouped.items())
+            {"id": cid, "sentences": sents}
+            for cid, sents in sorted(
+                grouped.items(),
+            )
         ],
     }
 
@@ -308,7 +321,29 @@ def get_predictions(
             adj_matrix, hyperparameter_combinations["model_hyperparameters"]
         )
         pred_clusters = {c.id: clusters[id2int[c]] for index, c in enumerate(context)}
-        save_cluster_assignments(pred_clusters, word, run_path)
+
+        id1_map = (
+            filtered_scores[["identifier1", "sentence1"]]
+            .drop_duplicates("identifier1")
+            .set_index("identifier1")["sentence1"]
+            .to_dict()
+        )
+
+        id2_map = (
+            filtered_scores[["identifier2", "sentence2"]]
+            .drop_duplicates("identifier2")
+            .set_index("identifier2")["sentence2"]
+            .to_dict()
+        )
+
+        sentences = {**id1_map, **id2_map}
+
+        save_cluster_assignments(
+            pred_clusters,
+            word,
+            run_path,
+            sentences,
+        )
         # save_cluster_assignments(
         #     pred_clusters,
         #     experiment_id,
@@ -389,7 +424,7 @@ def grid_search(
     model_hyperameter_combinations,
     metadata: dict = None,
 ):
-    scores = {}
+
     data = load_data(
         metadata["path_to_data"],
         wic_data=metadata["wic_data"],
@@ -407,17 +442,3 @@ def grid_search(
         hyperparameter_combinations,
         metadata,
     )
-
-    # for prompt in metadata["prompts"]:
-    #     logging.info(f"prompt: {prompt}")
-
-    #     metadata.update({"prompt": prompt})
-
-    #     results = cross_validation(
-    #         hyperparameter_combinations,
-    #         get_clusters,
-    #         scores[prompt],
-    #         metadata=metadata,
-    #     )
-
-    #     save_cv_results(results, metadata=metadata)
