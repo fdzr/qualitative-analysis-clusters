@@ -1,3 +1,4 @@
+import json
 import sys
 import logging
 import typing
@@ -5,6 +6,7 @@ import unicodedata
 from pathlib import Path
 import copy
 import random
+from collections import defaultdict
 
 import pandas as pd
 import numpy as np
@@ -103,7 +105,6 @@ def load_data(path: str, wic_data=False):
         return data
 
     data = pd.read_csv(path)
-    print(data.size)
 
     mask = data["prediction"] == "-"
     filtered_data = data[~mask]
@@ -193,6 +194,46 @@ def get_thresholds(scores: pd.Series):
     return [0.5] + list(np.quantile(scores, np.arange(0.1, 1.0, 0.1)))
 
 
+def _next_run_id(experiments_path: str):
+    runs = sorted(Path(experiments_path, "runs").glob("run_*"))
+    return f"run_{len(runs) + 1:03d}"
+
+
+def save_cluster_assignments(pred_clusters: dict, word: str, run_path: Path):
+    grouped = defaultdict(list)
+    for sentence_id, cluster_label in pred_clusters.items():
+        grouped[int(cluster_label)].append(sentence_id)
+
+    data = {
+        "word": word,
+        "clusters": [
+            {"id": cid, "sentence_ids": ids} for cid, ids in sorted(grouped.items())
+        ],
+    }
+
+    clusters_dir = run_path / "clusters"
+    clusters_dir.mkdir(parents=True, exist_ok=True)
+    (clusters_dir / f"{word}.json").write_text(
+        json.dumps(data, indent=2, ensure_ascii=False)
+    )
+
+
+def save_run_metadata(params: dict, spearman: float, run_path: Path):
+    run_path.mkdir(parents=True, exist_ok=True)
+    (run_path / "params.json").write_text(json.dumps(params, indent=2))
+    (run_path / "spearman.json").write_text(
+        json.dumps({"spearman": spearman}, indent=2)
+    )
+
+
+def update_summary(run_id: str, spearman: float, params: dict, experiments_path: Path):
+    summary_path = Path(experiments_path, "summary.json")
+    summary = json.loads(summary_path.read_text() if summary_path.exists() else [])
+    summary.append({"run": run_id, "spearman": spearman, "params": params})
+    summary.sort(key=lambda x: x["spearman"], reverse=True)
+    summary_path.write_text(json.dumps(summary, indent=2))
+
+
 def generate_hyperparameter_combinations(
     model_hyperparameter_combinations: list, fill_diagonal: bool, normalize: bool
 ):
@@ -225,7 +266,8 @@ def get_predictions(
     get_clusters: typing.Callable,
     scores: pd.DataFrame,
     hyperparameter_combinations: typing.List[dict],
-    metadata: dict = None,
+    metadata: dict,
+    run_path: Path,
 ):
     logging.info("get predictions ...")
     words = scores.word.unique()
@@ -266,6 +308,7 @@ def get_predictions(
             adj_matrix, hyperparameter_combinations["model_hyperparameters"]
         )
         pred_clusters = {c.id: clusters[id2int[c]] for index, c in enumerate(context)}
+        save_cluster_assignments(pred_clusters, word, run_path)
         # save_cluster_assignments(
         #     pred_clusters,
         #     experiment_id,
@@ -273,7 +316,6 @@ def get_predictions(
         #     path,
         # )
         jsd[word] = compute_jsd(pred_clusters, grouping)
-        print(jsd[word])
         # save_results(
         #     word,
         #     jsd[word],
@@ -296,10 +338,20 @@ def eval(
 
     metadata["name_file"] = "results_testing_set"
 
+    experiments_path = f"./results/{metadata['method']}/{metadata['dataset']}"
+    Path(experiments_path, "runs").mkdir(parents=True, exist_ok=True)
+
     for hyperparameters in parameters:
         if metadata["method"] in ["ac", "sc"]:
+            run_id = _next_run_id(experiments_path)
+            run_path = Path(experiments_path, "runs", run_id)
+
             jsd = get_predictions(
-                get_clusters, scores, hyperparameters, metadata=metadata
+                get_clusters,
+                scores,
+                hyperparameters,
+                metadata=metadata,
+                run_path=run_path,
             )
         # else:
         #     jsd = get_predictions_without_nclusters(
@@ -311,10 +363,16 @@ def eval(
         logging.info(" correlation calculated ...")
 
         logging.info("  saving results ...")
-        save_correlation(
+        save_run_metadata(
+            hyperparameters,
+            spr,
+            experiments_path,
+        )
+        update_summary(
+            run_id,
             spr,
             hyperparameters,
-            f"./results/{metadata['method']}/{metadata['dataset']}/testing.csv",
+            experiments_path,
         )
         logging.info("  results saved ...")
 
@@ -332,7 +390,6 @@ def grid_search(
         metadata["path_to_data"],
         wic_data=metadata["wic_data"],
     )
-    print(data.shape)
 
     hyperparameter_combinations = generate_hyperparameter_combinations(
         model_hyperameter_combinations,
