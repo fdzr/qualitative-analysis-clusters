@@ -228,7 +228,7 @@ def save_run_metadata(params: dict, spearman: float, run_path: Path):
 
 def update_summary(run_id: str, spearman: float, params: dict, experiments_path: Path):
     summary_path = Path(experiments_path, "summary.json")
-    summary = json.loads(summary_path.read_text() if summary_path.exists() else [])
+    summary = json.loads(summary_path.read_text()) if summary_path.exists() else []
     summary.append({"run": run_id, "spearman": spearman, "params": params})
     summary.sort(key=lambda x: x["spearman"], reverse=True)
     summary_path.write_text(json.dumps(summary, indent=2))
@@ -341,6 +341,8 @@ def eval(
     experiments_path = f"./results/{metadata['method']}/{metadata['dataset']}"
     Path(experiments_path, "runs").mkdir(parents=True, exist_ok=True)
 
+    results = {}
+
     for hyperparameters in parameters:
         if metadata["method"] in ["ac", "sc"]:
             run_id = _next_run_id(experiments_path)
@@ -366,7 +368,7 @@ def eval(
         save_run_metadata(
             hyperparameters,
             spr,
-            experiments_path,
+            run_path,
         )
         update_summary(
             run_id,
@@ -376,7 +378,9 @@ def eval(
         )
         logging.info("  results saved ...")
 
-        return spr
+        results[run_id] = spr
+
+    return results
 
 
 def grid_search(
