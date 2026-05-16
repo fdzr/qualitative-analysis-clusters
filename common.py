@@ -101,10 +101,6 @@ def compute_jsd(predictions: dict, grouping: pd.DataFrame, method: str = None):
 def load_data(path: str, wic_data=False):
     logging.info(f"loading data from {path} ...")
 
-    if wic_data is True:
-        data = pd.read_csv(f"{path}.scores")
-        return data
-
     data = pd.read_csv(path)
 
     mask = data["prediction"] == "-"
@@ -316,6 +312,7 @@ def get_predictions(
         )
 
         distance_matrix = adj_matrix.max() - adj_matrix
+        np.fill_diagonal(distance_matrix, 0)
         best_silhouette = -1
         best_labels = None
 
@@ -387,7 +384,9 @@ def eval(
 
     metadata["name_file"] = "results_testing_set"
 
-    experiments_path = f"./results/{metadata['method']}/{metadata['dataset']}"
+    experiments_path = (
+        f"./results/{metadata['method']}/{metadata['dataset']}/{metadata['model']}"
+    )
     Path(experiments_path, "runs").mkdir(parents=True, exist_ok=True)
 
     results = {}
