@@ -1,10 +1,15 @@
+import logging
+import signal
+
 import numpy as np
 import networkx as nx
 from collections import Counter
 
-import graph_tool
-from graph_tool.inference import minimize_blockmodel_dl
-from graph_tool.inference.blockmodel import BlockState
+import graph_tool.all as gt
+
+graph_tool = gt
+minimize_blockmodel_dl = gt.minimize_blockmodel_dl
+BlockState = gt.BlockState
 
 
 def wsbm_clustering(
@@ -42,7 +47,10 @@ def wsbm_clustering(
     gt_graph, _, gt2nx = _nxgraph_to_graphtoolgraph(
         graph.copy(), use_disconnected_edges=use_disconnected_edges
     )
-    state: BlockState = _minimize(gt_graph, distribution)
+    state: BlockState = _minimize_with_timeout(gt_graph, distribution)
+
+    if state is None:
+        return []
 
     block2clusterid_map = {}
     for i, (k, _) in enumerate(
@@ -142,17 +150,35 @@ def _minimize(graph: graph_tool.Graph, distribution: str) -> BlockState:
         ),
         multilevel_mcmc_args=dict(
             B_min=1,
-            B_max=30,
+            B_max=10,
             # verbose=True,
             # niter=100,
             entropy_args=dict(adjacency=False, degree_dl=False),
         ),
     )
 
-    for i in range(100):
+    for i in range(20):
         state.multiflip_mcmc_sweep(beta=np.inf, niter=1)
 
     return state
+
+
+def _minimize_with_timeout(
+    graph: graph_tool.Graph, distribution: str, timeout: int = 30
+):
+    def handler(signum, frame):
+        raise TimeoutError("WSBM timed out")
+
+    signal.signal(signal.SIGALRM, handler)
+    signal.alarm(timeout)
+    try:
+        state = _minimize(graph, distribution)
+        signal.alarm(0)
+        return state
+    except TimeoutError:
+        signal.alarm(0)
+        logging.warning(f"WSBM timed out for distribution={distribution}")
+        return None
 
 
 def _negative_weights_exist(graph: nx.Graph):

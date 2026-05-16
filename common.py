@@ -427,6 +427,10 @@ def get_predictions_no_clusters(
             adj_matrix,
             hyperparameter_combinations["model_hyperparameters"],
         )
+        if best_labels is None or len(best_labels) == 0:
+            logging.warning(f"Skipping word {word} - clustering timed out")
+            continue
+
         logging.info(f" n_clusters found={best_labels.max() + 1}")
 
         pred_clusters = {
