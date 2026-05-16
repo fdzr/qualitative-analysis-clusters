@@ -213,6 +213,7 @@ def save_cluster_assignments(
 
     data = {
         "word": word,
+        "n_clusters": len(grouped),
         "clusters": [
             {"id": cid, "sentences": sents}
             for cid, sents in sorted(
