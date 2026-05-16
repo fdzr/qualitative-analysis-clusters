@@ -11,6 +11,7 @@ from collections import defaultdict
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import silhouette_score
 from scipy.spatial import distance
 from scipy.stats import spearmanr
 
@@ -210,7 +211,7 @@ def save_cluster_assignments(
         grouped[int(cluster_label)].append(
             {
                 "id": sentence_id,
-                "text": sentences.get("sentence_id", " "),
+                "text": sentences.get(sentence_id, ""),
             }
         )
 
@@ -316,11 +317,37 @@ def get_predictions(
             hyperparameter_combinations["normalize"],
         )
 
-        logging.info("calculating predictions ...")
-        clusters = get_clusters(
-            adj_matrix, hyperparameter_combinations["model_hyperparameters"]
+        distance_matrix = adj_matrix.max() - adj_matrix
+        best_silhouette = -1
+        best_labels = None
+
+        for n in range(2, 6):
+            hyperparams = {
+                **hyperparameter_combinations["model_hyperparameters"],
+                "n_clusters": n,
+            }
+
+            labels = get_clusters(
+                distance_matrix,
+                hyperparameter_combinations["model_hyperparameters"],
+            )
+            score = silhouette_score(
+                distance_matrix,
+                labels,
+                metric="precomputed",
+            )
+            logging.info(f" n_clusters={n} silhouette={score:.4f}")
+            if score > best_silhouette:
+                best_silhouette = score
+                best_labels = labels
+
+        logging.info(
+            f" best n_clusters={best_labels.max() + 1} silhouette={best_silhouette:.4f}"
         )
-        pred_clusters = {c.id: clusters[id2int[c]] for index, c in enumerate(context)}
+
+        pred_clusters = {
+            c.id: best_labels[id2int[c]] for index, c in enumerate(context)
+        }
 
         id1_map = (
             filtered_scores[["identifier1", "sentence1"]]
