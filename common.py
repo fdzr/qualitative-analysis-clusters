@@ -98,7 +98,7 @@ def compute_jsd(predictions: dict, grouping: pd.DataFrame, method: str = None):
     return answer
 
 
-def load_data(path: str, wic_data=False):
+def load_data(path: str):
     logging.info(f"loading data from {path} ...")
 
     data = pd.read_csv(path)
@@ -447,15 +447,17 @@ def grid_search(
     metadata: dict = None,
 ):
 
-    data = load_data(
-        metadata["path_to_data"],
-        wic_data=metadata["wic_data"],
+    data = load_data(metadata["path_to_data"])
+    thresholds = (
+        get_thresholds(data["prediction"])
+        if metadata.get("use_threshold", False)
+        else None
     )
 
     hyperparameter_combinations = generate_hyperparameter_combinations(
         model_hyperameter_combinations,
-        metadata["fill_diagonal"],
         metadata["normalize"],
+        thresholds,
     )
 
     eval(
