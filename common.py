@@ -295,8 +295,10 @@ def get_predictions(
         mask = scores["word"] == word
         filtered_scores = scores[mask]
 
-        ids = set(filtered_scores["identifier1"].to_list()).union(
-            set(filtered_scores["identifier2"].to_list())
+        ids = sorted(
+            set(filtered_scores["identifier1"].to_list()).union(
+                set(filtered_scores["identifier2"].to_list())
+            )
         )
 
         grouping = pd.DataFrame({"ids": list(ids)})
@@ -328,8 +330,8 @@ def get_predictions(
             }
 
             labels = get_clusters(
-                distance_matrix,
-                hyperparameter_combinations["model_hyperparameters"],
+                adj_matrix,
+                hyperparams,
             )
             score = silhouette_score(
                 distance_matrix,
