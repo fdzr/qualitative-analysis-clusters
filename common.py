@@ -481,10 +481,10 @@ def eval(
     results = {}
 
     for hyperparameters in parameters:
-        if metadata["method"] in ["ac", "sc"]:
-            run_id = _next_run_id(experiments_path)
-            run_path = Path(experiments_path, "runs", run_id)
+        run_id = _next_run_id(experiments_path)
+        run_path = Path(experiments_path, "runs", run_id)
 
+        if metadata["method"] in ["ac", "sc"]:
             jsd = get_predictions(
                 get_clusters,
                 scores,
@@ -560,7 +560,7 @@ def grid_search_no_clusters(
 
     data = load_data(metadata["path_to_data"])
     thresholds = (
-        get_thresholds(data["predictions"])
+        get_thresholds(data["prediction"])
         if metadata.get("use_threshold", False)
         else None
     )
