@@ -188,7 +188,7 @@ def get_scaler(scores: pd.Series):
 
 
 def get_thresholds(scores: pd.Series):
-    return [0.5] + list(np.quantile(scores, np.arange(0.1, 1.0, 0.1)))
+    return [(i, float(np.quantile(scores, i / 10))) for i in range(1, 10)]
 
 
 def _next_run_id(experiments_path: str):
@@ -245,29 +245,37 @@ def update_summary(run_id: str, spearman: float, params: dict, experiments_path:
 
 
 def generate_hyperparameter_combinations(
-    model_hyperparameter_combinations: list, fill_diagonal: bool, normalize: bool
+    model_hyperparameter_combinations: list,
+    normalize: bool,
+    thresholds: typing.List | None,
 ):
     hyperparameter_combinations = []
 
     for fd in [True, False]:
         for nm in [False] if normalize is False else [False, True]:
-            for combination in model_hyperparameter_combinations:
-                if "distribution" in combination:
-                    if (
-                        combination["distribution"].startswith("discrete")
-                        and nm is True
-                    ):
-                        continue
-                    if combination["distribution"].startswith("real") and nm is False:
-                        continue
+            for quantile, threshold in (thresholds if thresholds else [(None, None)]):
+                for combination in model_hyperparameter_combinations:
+                    if "distribution" in combination:
+                        if (
+                            combination["distribution"].startswith("discrete")
+                            and nm is True
+                        ):
+                            continue
+                        if (
+                            combination["distribution"].startswith("real")
+                            and nm is False
+                        ):
+                            continue
 
-                hyperparameter_combinations.append(
-                    {
-                        "fill_diagonal": fd,
-                        "normalize": nm,
-                        "model_hyperparameters": combination,
-                    }
-                )
+                    hyperparameter_combinations.append(
+                        {
+                            "fill_diagonal": fd,
+                            "normalize": nm,
+                            "quantile": quantile,
+                            "threshold": threshold,
+                            "model_hyperparameters": combination,
+                        }
+                    )
 
     return hyperparameter_combinations
 
@@ -309,6 +317,7 @@ def get_predictions(
             n_sentences,
             hyperparameter_combinations["fill_diagonal"],
             hyperparameter_combinations["normalize"],
+            hyperparameter_combinations.get("threshold", None),
         )
 
         distance_matrix = adj_matrix.max() - adj_matrix
