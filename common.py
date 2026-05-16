@@ -253,7 +253,7 @@ def generate_hyperparameter_combinations(
 ):
     hyperparameter_combinations = []
 
-    for fd in [True]:
+    for fd in [True, False]:
         for nm in [False] if normalize is False else [False, True]:
             for combination in model_hyperparameter_combinations:
                 if "distribution" in combination:
@@ -286,10 +286,6 @@ def get_predictions(
     logging.info("get predictions ...")
     words = scores.word.unique()
     jsd = {}
-
-    method = metadata["method"]
-    dataset = metadata["dataset"]
-    name_file = metadata["name_file"]
 
     for word in words:
         mask = scores["word"] == word
@@ -373,19 +369,8 @@ def get_predictions(
             run_path,
             sentences,
         )
-        # save_cluster_assignments(
-        #     pred_clusters,
-        #     experiment_id,
-        #     word,
-        #     path,
-        # )
+
         jsd[word] = compute_jsd(pred_clusters, grouping)
-        # save_results(
-        #     word,
-        #     jsd[word],
-        #     hyperparameter_combinations,
-        #     f"./results/{method}/{dataset}/full_experiment.csv",
-        # )
 
     logging.info("returning predictions ...")
 
