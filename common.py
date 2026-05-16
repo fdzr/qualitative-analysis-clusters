@@ -259,12 +259,12 @@ def generate_hyperparameter_combinations(
                     if "distribution" in combination:
                         if (
                             combination["distribution"].startswith("discrete")
-                            and nm is True
+                            and normalize is True
                         ):
                             continue
                         if (
                             combination["distribution"].startswith("real")
-                            and nm is False
+                            and normalize is False
                         ):
                             continue
 
