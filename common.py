@@ -42,8 +42,8 @@ def get_adj_matrix(
 
     if normalize is True:
         scaler = MinMaxScaler()
-        scores["score"] = scaler.fit_transform(
-            scores["score"].to_numpy().reshape(-1, 1)
+        scores["prediction"] = scaler.fit_transform(
+            scores["prediction"].to_numpy().reshape(-1, 1)
         )
 
     for _, row in scores.iterrows():
