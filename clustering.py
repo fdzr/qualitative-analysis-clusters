@@ -8,6 +8,8 @@ from collections import Counter
 import graph_tool.all as gt
 import chinese_whispers as cw
 
+from _correlation import *
+
 graph_tool = gt
 minimize_blockmodel_dl = gt.minimize_blockmodel_dl
 BlockState = gt.BlockState
@@ -294,3 +296,13 @@ def _convert_graph_cluster_list_set_to_list(
             new_cluster_list[node] = i
 
     return new_cluster_list
+
+
+def correlation_clustering(graph: nx.Graph, **params) -> list:
+    if _check_nan_weights_exits(graph):
+        raise ValueError("Nan weights are not supported by correlation clustering.")
+
+    params.pop("min_max", None)
+    clusters, _ = cluster_correlation_search(graph, **params)
+
+    return clusters
