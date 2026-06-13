@@ -11,6 +11,8 @@ from collections import defaultdict
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import silhouette_score, adjusted_rand_score
+from sklearn.model_selection import KFold
 from scipy.spatial import distance
 from scipy.stats import spearmanr
 
@@ -41,8 +43,8 @@ def get_adj_matrix(
 
     if normalize is True:
         scaler = MinMaxScaler()
-        scores["score"] = scaler.fit_transform(
-            scores["score"].to_numpy().reshape(-1, 1)
+        scores["prediction"] = scaler.fit_transform(
+            scores["prediction"].to_numpy().reshape(-1, 1)
         )
 
     for _, row in scores.iterrows():
@@ -97,12 +99,8 @@ def compute_jsd(predictions: dict, grouping: pd.DataFrame, method: str = None):
     return answer
 
 
-def load_data(path: str, wic_data=False):
+def load_data(path: str):
     logging.info(f"loading data from {path} ...")
-
-    if wic_data is True:
-        data = pd.read_csv(f"{path}.scores")
-        return data
 
     data = pd.read_csv(path)
 
@@ -186,17 +184,128 @@ def calculate_correlation(jsd: dict[str, Results], path_to_gold_data):
     return spr
 
 
+def calculate_correlation_for_words(
+    jsd: dict,
+    path_to_gold_data: str,
+    words: list,
+) -> float:
+
+    gold_data = get_gold_data(path_to_gold_data)
+    pred_change_graded = []
+    gold_change_graded = []
+
+    for word in words:
+        processed_word = unicodedata.normalize("NFC", word)
+        if processed_word not in jsd:
+            continue
+        if processed_word not in gold_data:
+            logging.warning(f"  {word} not found in gold data ...")
+            continue
+
+        pred_change_graded.append(jsd[processed_word].jsd)
+        gold_change_graded.append(gold_data[processed_word][0])
+
+    if len(pred_change_graded) < 2:
+        return 0.0
+
+    return spearmanr(gold_change_graded, pred_change_graded)[0]
+
+
 def get_scaler(scores: pd.Series):
     return MinMaxScaler().fit(np.array(scores).reshape(-1, 1))
 
 
 def get_thresholds(scores: pd.Series):
-    return [0.5] + list(np.quantile(scores, np.arange(0.1, 1.0, 0.1)))
+    return [(i, float(np.quantile(scores, i / 10))) for i in range(1, 10)]
 
 
 def _next_run_id(experiments_path: str):
     runs = sorted(Path(experiments_path, "runs").glob("run_*"))
     return f"run_{len(runs) + 1:03d}"
+
+
+def generate_and_save_folds(
+    scores: pd.DataFrame,
+    experiments_path: str,
+    k: int = 5,
+    seed: int = 42,
+) -> dict:
+
+    words = sorted(scores.word.unique())
+    kf = KFold(
+        n_splits=k,
+        shuffle=True,
+        random_state=seed,
+    )
+
+    folds = {}
+    for idx, (train_idx, test_idx) in enumerate(kf.split(words), start=1):
+        folds[f"fold_{idx}"] = {
+            "train": [words[j] for j in train_idx],
+            "test": [words[j] for j in test_idx],
+        }
+
+    cv_path = Path(experiments_path, "cv")
+    cv_path.mkdir(parents=True, exist_ok=True)
+    (cv_path / "folds.json").write_text(json.dumps(folds, indent=2))
+
+    return folds
+
+
+def load_gold_senses(path: str):
+    df = pd.read_csv(path)
+    return dict(zip(df["identifier"], df["cluster"]))
+
+
+def build_english_gold_index(gold_dir: str) -> dict:
+    index = {}
+    for path in Path(gold_dir).glob("*.csv"):
+        word = path.stem.rsplit("_", 1)[0]
+        index[word] = str(path)
+
+    return index
+
+
+def get_spanish_gold_path(gold_dir: str, word: str):
+    return str(Path(gold_dir) / f"{word}.csv")
+
+
+def compute_ari_for_word(pred_clusters: dict, gold_senses: dict) -> float:
+    common_ids = sorted(set(pred_clusters.keys()) & set(gold_senses.keys()))
+    if len(common_ids) < 2:
+        return 0.0
+
+    pred_labels = [int(pred_clusters[id]) for id in common_ids]
+    gold_labels = [int(gold_senses[id]) for id in common_ids]
+
+    return adjusted_rand_score(gold_labels, pred_labels)
+
+
+def calculate_ari_across_words(
+    pred_clusters_per_word: dict,
+    words: list,
+    gold_dir: str,
+    dataset: str,
+) -> float:
+
+    scores = []
+    for word in words:
+        if word not in pred_clusters_per_word:
+            continue
+        if dataset == "dwug_es":
+            gold_path = get_spanish_gold_path(gold_dir, word)
+        else:
+            index = build_english_gold_index(gold_dir)
+            gold_path = index.get(word)
+            if gold_path is None:
+                logging.warning(f"No gold file found for word: {word}")
+                continue
+
+        gold_senses = load_gold_senses(gold_path)
+        ari = compute_ari_for_word(pred_clusters_per_word[word], gold_senses)
+        scores.append(ari)
+
+    return sum(scores) / len(scores) if scores else 0.0
 
 
 def save_cluster_assignments(
@@ -210,12 +319,13 @@ def save_cluster_assignments(
         grouped[int(cluster_label)].append(
             {
                 "id": sentence_id,
-                "text": sentences.get("sentence_id", " "),
+                "text": sentences.get(sentence_id, ""),
             }
         )
 
     data = {
         "word": word,
+        "n_clusters": len(grouped),
         "clusters": [
             {"id": cid, "sentences": sents}
             for cid, sents in sorted(
@@ -248,31 +358,235 @@ def update_summary(run_id: str, spearman: float, params: dict, experiments_path:
 
 
 def generate_hyperparameter_combinations(
-    model_hyperparameter_combinations: list, fill_diagonal: bool, normalize: bool
+    model_hyperparameter_combinations: list,
+    normalize: bool,
+    thresholds: typing.List | None,
 ):
     hyperparameter_combinations = []
 
-    for fd in [True]:
+    for fd in [True, False]:
         for nm in [False] if normalize is False else [False, True]:
-            for combination in model_hyperparameter_combinations:
-                if "distribution" in combination:
-                    if (
-                        combination["distribution"].startswith("discrete")
-                        and nm is True
-                    ):
-                        continue
-                    if combination["distribution"].startswith("real") and nm is False:
-                        continue
+            for quantile, threshold in (thresholds if thresholds else [(None, None)]):
+                for combination in model_hyperparameter_combinations:
+                    if "distribution" in combination:
+                        if (
+                            combination["distribution"].startswith("discrete")
+                            and normalize is True
+                        ):
+                            continue
+                        if (
+                            combination["distribution"].startswith("real")
+                            and normalize is False
+                        ):
+                            continue
 
-                hyperparameter_combinations.append(
-                    {
-                        "fill_diagonal": fd,
-                        "normalize": nm,
-                        "model_hyperparameters": combination,
-                    }
-                )
+                    hyperparameter_combinations.append(
+                        {
+                            "fill_diagonal": fd,
+                            "normalize": nm,
+                            "quantile": quantile,
+                            "threshold": threshold,
+                            "model_hyperparameters": combination,
+                        }
+                    )
 
     return hyperparameter_combinations
+
+
+def cross_validate(
+    get_clusters: typing.Callable,
+    model_hyperparameter_combinations: list,
+    metadata: dict,
+    gold_dir: str,
+    k: int = 5,
+):
+    data = load_data(metadata["path_to_data"])
+    thresholds = (
+        get_thresholds(data["prediction"])
+        if metadata.get("use_threshold", False)
+        else None
+    )
+
+    hyperparameter_combinations = generate_hyperparameter_combinations(
+        model_hyperparameter_combinations,
+        metadata["normalize"],
+        thresholds,
+    )
+
+    experiments_path = (
+        f"./results/{metadata['method']}/{metadata['dataset']}/{metadata['model']}"
+    )
+    folds = generate_and_save_folds(data, experiments_path, k=k)
+    cv_results = []
+
+    for fold_name, fold_data in folds.items():
+        logging.info(f"processing {fold_name} ...")
+
+        train_words = fold_data["train"]
+        test_words = fold_data["test"]
+
+        train_scores = data[data["word"].isin(train_words)]
+        test_scores = data[data["word"].isin(test_words)]
+
+        fold_path = Path(experiments_path, "cv", fold_name)
+        fold_path.mkdir(parents=True, exist_ok=True)
+
+        best_train_ari = -1
+        best_params_ari = None
+        best_train_lscd = -1
+        best_params_lscd = None
+
+        for hyperparameters in hyperparameter_combinations:
+            dummy_path = fold_path / "train_temp"
+
+            if metadata["method"] in ["sc", "ac"]:
+                train_jsd, train_pred = get_predictions(
+                    get_clusters,
+                    train_scores,
+                    hyperparameters,
+                    metadata=metadata,
+                    run_path=dummy_path,
+                    save_clusters=False,
+                )
+            else:
+                train_jsd, train_pred = get_predictions_no_clusters(
+                    get_clusters,
+                    train_scores,
+                    hyperparameters,
+                    metadata=metadata,
+                    run_path=dummy_path,
+                    save_clusters=False,
+                )
+
+            train_ari = calculate_ari_across_words(
+                train_pred,
+                train_words,
+                gold_dir,
+                metadata["dataset"],
+            )
+            train_lscd = calculate_correlation_for_words(
+                train_jsd,
+                metadata["path_to_gold_data"],
+                train_words,
+            )
+
+            if train_ari > best_train_ari:
+                best_train_ari = train_ari
+                best_params_ari = hyperparameters
+
+            if train_lscd > best_train_lscd:
+                best_train_lscd = train_lscd
+                best_params_lscd = hyperparameters
+
+        test_path_ari = fold_path / "protocol_ari"
+        if metadata["method"] in ["ac", "sc"]:
+            test_jsd_ari, test_pred_ari = get_predictions(
+                get_clusters,
+                test_scores,
+                best_params_ari,
+                metadata=metadata,
+                run_path=test_path_ari,
+                save_clusters=True,
+            )
+        else:
+            test_jsd_ari, test_pred_ari = get_predictions_no_clusters(
+                get_clusters,
+                test_scores,
+                best_params_ari,
+                metadata=metadata,
+                run_path=test_path_ari,
+                save_clusters=True,
+            )
+
+        test_ari_p1 = calculate_ari_across_words(
+            test_pred_ari,
+            test_words,
+            gold_dir,
+            metadata["dataset"],
+        )
+        test_lscd_p1 = calculate_correlation_for_words(
+            test_jsd_ari,
+            metadata["path_to_gold_data"],
+            test_words,
+        )
+
+        test_path_lscd = fold_path / "protocol_lscd"
+        if metadata["method"] in ["ac", "sc"]:
+            test_jsd_lscd, test_pred_lscd = get_predictions(
+                get_clusters,
+                test_scores,
+                best_params_lscd,
+                metadata=metadata,
+                run_path=test_path_lscd,
+                save_clusters=True,
+            )
+        else:
+            test_jsd_lscd, test_pred_lscd = get_predictions_no_clusters(
+                get_clusters,
+                test_scores,
+                best_params_lscd,
+                metadata=metadata,
+                run_path=test_path_lscd,
+                save_clusters=True,
+            )
+
+        test_lscd_p2 = calculate_correlation_for_words(
+            test_jsd_lscd,
+            metadata["path_to_gold_data"],
+            test_words,
+        )
+        test_ari_p2 = calculate_ari_across_words(
+            test_pred_lscd,
+            test_words,
+            gold_dir,
+            metadata["dataset"],
+        )
+
+        fold_results = {
+            "protocol_ari": {
+                "best_params": best_params_ari,
+                "train_ari": best_train_ari,
+                "test_ari": test_ari_p1,
+                "test_lscd": test_lscd_p1,
+            },
+            "protocol_lscd": {
+                "best_params": best_params_lscd,
+                "train_lscd": best_train_lscd,
+                "test_lscd": test_lscd_p2,
+                "test_ari": test_ari_p2,
+            },
+        }
+
+        (fold_path / "results.json").write_text(json.dump(fold_results, indent=2))
+        cv_results.append(fold_results)
+
+        logging.info(
+            f"{fold_name} - P1: test_ari={test_ari_p1:.4f} test_lscd={test_lscd_p1:.4f} | "
+            f"P2: test_lscd={test_lscd_p2:.4f} test_ari={test_ari_p2:.4f}"
+        )
+
+    cv_summary = {
+        "protocol_ari": {
+            "avg_test_ari": sum(r["protocol_ari"]["test_ari"] for r in cv_results) / k,
+            "avg_test_lscd": sum(r["protocol_ari"]["test_lscd"] for r in cv_results)
+            / k,
+        },
+        "protocol_lscd": {
+            "avg_test_lscd": sum(r["protocol_lscd"]["test_lscd"] for r in cv_results)
+            / k,
+            "avg_test_ari": sum(r["protocol_lscd"]["test_ari"] for r in cv_results) / k,
+        },
+    }
+
+    cv_path = Path(experiments_path, "cv")
+    (cv_path / "cv_summary.json").write_text(json.dumps(cv_summary, indent=2))
+
+    logging.info(
+        f"CV done - P1: avg_test_ari={cv_summary["protocol_ari"]["avg_test_ari"]:.4f} | "
+        f"P2: avg_test_lscd={cv_summary['protocol_lscd']['avg_test_lscd']:.4f}"
+    )
+
+    return cv_summary
 
 
 def get_predictions(
@@ -281,21 +595,21 @@ def get_predictions(
     hyperparameter_combinations: typing.List[dict],
     metadata: dict,
     run_path: Path,
+    save_clusters: bool = True,
 ):
     logging.info("get predictions ...")
     words = scores.word.unique()
     jsd = {}
-
-    method = metadata["method"]
-    dataset = metadata["dataset"]
-    name_file = metadata["name_file"]
+    pred_clusters_per_word = {}
 
     for word in words:
         mask = scores["word"] == word
         filtered_scores = scores[mask]
 
-        ids = set(filtered_scores["identifier1"].to_list()).union(
-            set(filtered_scores["identifier2"].to_list())
+        ids = sorted(
+            set(filtered_scores["identifier1"].to_list()).union(
+                set(filtered_scores["identifier2"].to_list())
+            )
         )
 
         grouping = pd.DataFrame({"ids": list(ids)})
@@ -305,7 +619,6 @@ def get_predictions(
 
         context = [ShortUse(word=word, id=id) for id in ids]
         n_sentences = len(ids)
-
         id2int = {value: index for index, value in enumerate(context)}
 
         adj_matrix = get_adj_matrix(
@@ -314,13 +627,42 @@ def get_predictions(
             n_sentences,
             hyperparameter_combinations["fill_diagonal"],
             hyperparameter_combinations["normalize"],
+            hyperparameter_combinations.get("threshold", None),
         )
 
-        logging.info("calculating predictions ...")
-        clusters = get_clusters(
-            adj_matrix, hyperparameter_combinations["model_hyperparameters"]
+        distance_matrix = adj_matrix.max() - adj_matrix
+        np.fill_diagonal(distance_matrix, 0)
+        best_silhouette = -1
+        best_labels = None
+
+        for n in range(2, 6):
+            hyperparams = {
+                **hyperparameter_combinations["model_hyperparameters"],
+                "n_clusters": n,
+            }
+
+            labels = get_clusters(
+                adj_matrix,
+                hyperparams,
+            )
+            score = silhouette_score(
+                distance_matrix,
+                labels,
+                metric="precomputed",
+            )
+            logging.info(f" n_clusters={n} silhouette={score:.4f}")
+            if score > best_silhouette:
+                best_silhouette = score
+                best_labels = labels
+
+        logging.info(
+            f" best n_clusters={best_labels.max() + 1} silhouette={best_silhouette:.4f}"
         )
-        pred_clusters = {c.id: clusters[id2int[c]] for index, c in enumerate(context)}
+
+        pred_clusters = {
+            c.id: best_labels[id2int[c]] for index, c in enumerate(context)
+        }
+        pred_clusters_per_word[word] = pred_clusters
 
         id1_map = (
             filtered_scores[["identifier1", "sentence1"]]
@@ -338,29 +680,112 @@ def get_predictions(
 
         sentences = {**id1_map, **id2_map}
 
-        save_cluster_assignments(
+        if save_clusters:
+            save_cluster_assignments(
+                pred_clusters,
+                word,
+                run_path,
+                sentences,
+            )
+
+        jsd[word] = compute_jsd(
             pred_clusters,
-            word,
-            run_path,
-            sentences,
+            grouping,
         )
-        # save_cluster_assignments(
-        #     pred_clusters,
-        #     experiment_id,
-        #     word,
-        #     path,
-        # )
-        jsd[word] = compute_jsd(pred_clusters, grouping)
-        # save_results(
-        #     word,
-        #     jsd[word],
-        #     hyperparameter_combinations,
-        #     f"./results/{method}/{dataset}/full_experiment.csv",
-        # )
 
     logging.info("returning predictions ...")
 
-    return jsd
+    return jsd, pred_clusters_per_word
+
+
+def get_predictions_no_clusters(
+    get_clusters: typing.Callable,
+    scores: pd.DataFrame,
+    hyperparameter_combinations: dict,
+    metadata: dict,
+    run_path: Path,
+    save_clusters: bool = True,
+):
+    logging.info("get predictions ...")
+    words = scores.word.unique()
+    jsd = {}
+    pred_clusters_per_word = {}
+
+    for word in words:
+        mask = scores["word"] == word
+        filtered_scores = scores[mask]
+
+        ids = sorted(
+            set(filtered_scores["identifier1"].to_list()).union(
+                set(filtered_scores["identifier2"].to_list())
+            )
+        )
+
+        grouping = pd.DataFrame({"ids": list(ids)})
+        grouping["grouping"] = grouping.apply(
+            lambda row: 1 if row["ids"].startswith("old") else 2, axis=1
+        )
+
+        context = [ShortUse(word=word, id=id) for id in ids]
+        n_sentences = len(ids)
+        id2int = {value: index for index, value in enumerate(context)}
+
+        adj_matrix = get_adj_matrix(
+            filtered_scores,
+            id2int,
+            n_sentences,
+            hyperparameter_combinations["fill_diagonal"],
+            hyperparameter_combinations["normalize"],
+            hyperparameter_combinations.get("threshold", None),
+        )
+
+        logging.info(f"calculating clusters for word: {word} ...")
+        best_labels = get_clusters(
+            adj_matrix,
+            hyperparameter_combinations["model_hyperparameters"],
+        )
+        if best_labels is None or len(best_labels) == 0:
+            logging.warning(f"Skipping word {word} - clustering timed out")
+            continue
+
+        logging.info(f" n_clusters found={best_labels.max() + 1}")
+
+        pred_clusters = {
+            c.id: best_labels[id2int[c]] for index, c in enumerate(context)
+        }
+        pred_clusters_per_word[word] = pred_clusters
+
+        id1_map = (
+            filtered_scores[["identifier1", "sentence1"]]
+            .drop_duplicates("identifier1")
+            .set_index("identifier1")["sentence1"]
+            .to_dict()
+        )
+
+        id2_map = (
+            filtered_scores[["identifier2", "sentence2"]]
+            .drop_duplicates("identifier2")
+            .set_index("identifier2")["sentence2"]
+            .to_dict()
+        )
+
+        sentences = {**id1_map, **id2_map}
+
+        if save_clusters:
+            save_cluster_assignments(
+                pred_clusters,
+                word,
+                run_path,
+                sentences,
+            )
+
+        jsd[word] = compute_jsd(
+            pred_clusters,
+            grouping,
+        )
+
+    logging.info("returning predictions ...")
+    return jsd, pred_clusters_per_word
 
 
 def eval(
@@ -373,27 +798,33 @@ def eval(
 
     metadata["name_file"] = "results_testing_set"
 
-    experiments_path = f"./results/{metadata['method']}/{metadata['dataset']}"
+    experiments_path = (
+        f"./results/{metadata['method']}/{metadata['dataset']}/{metadata['model']}"
+    )
     Path(experiments_path, "runs").mkdir(parents=True, exist_ok=True)
 
     results = {}
 
     for hyperparameters in parameters:
-        if metadata["method"] in ["ac", "sc"]:
-            run_id = _next_run_id(experiments_path)
-            run_path = Path(experiments_path, "runs", run_id)
+        run_id = _next_run_id(experiments_path)
+        run_path = Path(experiments_path, "runs", run_id)
 
-            jsd = get_predictions(
+        if metadata["method"] in ["ac", "sc"]:
+            jsd, _ = get_predictions(
                 get_clusters,
                 scores,
                 hyperparameters,
                 metadata=metadata,
                 run_path=run_path,
             )
-        # else:
-        #     jsd = get_predictions_without_nclusters(
-        #         get_clusters, scores, hyperparameters, metadata=metadata
-        #     )
+        else:
+            jsd, _ = get_predictions_no_clusters(
+                get_clusters,
+                scores,
+                hyperparameters,
+                metadata=metadata,
+                run_path=run_path,
+            )
 
         logging.info("  calculating correlation ...")
         spr = calculate_correlation(jsd, metadata["path_to_gold_data"])
@@ -425,20 +856,49 @@ def grid_search(
     metadata: dict = None,
 ):
 
-    data = load_data(
-        metadata["path_to_data"],
-        wic_data=metadata["wic_data"],
+    data = load_data(metadata["path_to_data"])
+    thresholds = (
+        get_thresholds(data["prediction"])
+        if metadata.get("use_threshold", False)
+        else None
     )
 
     hyperparameter_combinations = generate_hyperparameter_combinations(
         model_hyperameter_combinations,
-        metadata["fill_diagonal"],
         metadata["normalize"],
+        thresholds,
     )
 
     eval(
         get_clusters,
         data,
         hyperparameter_combinations,
+        metadata,
+    )
+
+
+def grid_search_no_clusters(
+    get_clusters: typing.Callable,
+    model_hyperparameter_combinations: typing.List,
+    metadata: dict = None,
+):
+
+    data = load_data(metadata["path_to_data"])
+    thresholds = (
+        get_thresholds(data["prediction"])
+        if metadata.get("use_threshold", False)
+        else None
+    )
+
+    hyperparameters_combinations = generate_hyperparameter_combinations(
+        model_hyperparameter_combinations,
+        metadata["normalize"],
+        thresholds,
+    )
+
+    eval(
+        get_clusters,
+        data,
+        hyperparameters_combinations,
         metadata,
     )
