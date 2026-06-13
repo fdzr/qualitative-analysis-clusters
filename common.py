@@ -557,7 +557,7 @@ def cross_validate(
             },
         }
 
-        (fold_path / "results.json").write_text(json.dump(fold_results, indent=2))
+        (fold_path / "results.json").write_text(json.dumps(fold_results, indent=2))
         cv_results.append(fold_results)
 
         logging.info(
@@ -787,91 +787,6 @@ def get_predictions_no_clusters(
 
     logging.info("returning predictions ...")
     return jsd, pred_clusters_per_word
-
-
-def get_predictions_no_clusters(
-    get_clusters: typing.Callable,
-    scores: pd.DataFrame,
-    hyperparameter_combinations: dict,
-    metadata: dict,
-    run_path: Path,
-):
-    logging.info("get predictions ...")
-    words = scores.word.unique()
-    jsd = {}
-
-    for word in words:
-        mask = scores["word"] == word
-        filtered_scores = scores[mask]
-
-        ids = sorted(
-            set(filtered_scores["identifier1"].to_list()).union(
-                set(filtered_scores["identifier2"].to_list())
-            )
-        )
-
-        grouping = pd.DataFrame({"ids": list(ids)})
-        grouping["grouping"] = grouping.apply(
-            lambda row: 1 if row["ids"].startswith("old") else 2, axis=1
-        )
-
-        context = [ShortUse(word=word, id=id) for id in ids]
-        n_sentences = len(ids)
-        id2int = {value: index for index, value in enumerate(context)}
-
-        adj_matrix = get_adj_matrix(
-            filtered_scores,
-            id2int,
-            n_sentences,
-            hyperparameter_combinations["fill_diagonal"],
-            hyperparameter_combinations["normalize"],
-            hyperparameter_combinations.get("threshold", None),
-        )
-
-        logging.info(f"calculating clusters for word: {word} ...")
-        best_labels = get_clusters(
-            adj_matrix,
-            hyperparameter_combinations["model_hyperparameters"],
-        )
-        if best_labels is None or len(best_labels) == 0:
-            logging.warning(f"Skipping word {word} - clustering timed out")
-            continue
-
-        logging.info(f" n_clusters found={best_labels.max() + 1}")
-
-        pred_clusters = {
-            c.id: best_labels[id2int[c]] for index, c in enumerate(context)
-        }
-
-        id1_map = (
-            filtered_scores[["identifier1", "sentence1"]]
-            .drop_duplicates("identifier1")
-            .set_index("identifier1")["sentence1"]
-            .to_dict()
-        )
-
-        id2_map = (
-            filtered_scores[["identifier2", "sentence2"]]
-            .drop_duplicates("identifier2")
-            .set_index("identifier2")["sentence2"]
-            .to_dict()
-        )
-
-        sentences = {**id1_map, **id2_map}
-
-        save_cluster_assignments(
-            pred_clusters,
-            word,
-            run_path,
-            sentences,
-        )
-        jsd[word] = compute_jsd(
-            pred_clusters,
-            grouping,
-        )
-
-    logging.info("returning predictions ...")
-    return jsd
 
 
 def eval(
