@@ -658,6 +658,11 @@ def get_predictions(
                 adj_matrix,
                 hyperparams,
             )
+
+            if len(set(labels)) < 2:
+                logging.warning(f"  n_clusters={n} produced only 1 cluster, skipping")
+                continue
+
             score = silhouette_score(
                 distance_matrix,
                 labels,
@@ -667,6 +672,9 @@ def get_predictions(
             if score > best_silhouette:
                 best_silhouette = score
                 best_labels = labels
+
+        if best_labels is None:
+            logging.warning(f"  all cluster attempts failed for word {word}, skipping")
 
         logging.info(
             f" best n_clusters={best_labels.max() + 1} silhouette={best_silhouette:.4f}"
