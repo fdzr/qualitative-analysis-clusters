@@ -1,5 +1,23 @@
 import sys
 import time
+import types
+import joblib
+
+try:
+    import joblib.my_exceptions
+except ImportError:
+    _my_exceptions = types.ModuleType("joblib.my_exceptions")
+    # sys.modules["joblib.my_exceptions"] = _my_exceptions
+    # joblib.my_exceptions = _my_exceptions
+
+    class WorkerInterrupt(Exception):
+        pass
+
+    _my_exceptions.WorkerInterrupt = WorkerInterrupt
+    sys.modules["joblib.my_exceptions"] = _my_exceptions
+    joblib.my_exceptions = _my_exceptions
+
+
 from collections import defaultdict
 
 import multiprocessing as mp
@@ -99,7 +117,7 @@ def cluster_correlation_search(
     solutions = pool.starmap(
         Linear_loss.optimize_simulated_annealing,
         [
-            (n, classes, G.nodes(), init_state, max_attempts, max_iters)
+            (n, classes, list(G.nodes()), init_state, max_attempts, max_iters)
             for n in range(2, max_senses)
         ],
     )
