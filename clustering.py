@@ -6,10 +6,38 @@ import networkx as nx
 from collections import Counter
 
 import graph_tool.all as gt
+import chinese_whispers as cw
 
 graph_tool = gt
 minimize_blockmodel_dl = gt.minimize_blockmodel_dl
 BlockState = gt.BlockState
+
+
+def chinese_whispers_clustering(
+    graph: nx.Graph,
+    weighting: str = "top",
+    iterations: int = 20,
+    seed: int = None,
+):
+    if _check_nan_weights_exits(graph):
+        raise ValueError(
+            "Nan weights are not supported by the Chinese Whispers method."
+        )
+
+    _graph = graph.copy()
+    _cw_clustering = cw.aggregate_clusters(
+        cw.chinese_whispers(
+            _graph,
+            weighting=weighting,
+            iterations=iterations,
+            seed=seed,
+        )
+    )
+
+    classes = [v for _, v in _cw_clustering.items()]
+    classes.sort(key=lambda x: len(x), reverse=True)
+
+    return classes
 
 
 def wsbm_clustering(
