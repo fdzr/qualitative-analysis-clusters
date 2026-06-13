@@ -383,17 +383,16 @@ def generate_hyperparameter_combinations(
             for quantile, threshold in (thresholds if thresholds else [(None, None)]):
                 for combination in model_hyperparameter_combinations:
                     if not skip_distribution_filter and "distribution" in combination:
-                        if "distribution" in combination:
-                            if (
-                                combination["distribution"].startswith("discrete")
-                                and normalize is True
-                            ):
-                                continue
-                            if (
-                                combination["distribution"].startswith("real")
-                                and normalize is False
-                            ):
-                                continue
+                        if (
+                            combination["distribution"].startswith("discrete")
+                            and normalize is True
+                        ):
+                            continue
+                        if (
+                            combination["distribution"].startswith("real")
+                            and normalize is False
+                        ):
+                            continue
 
                     hyperparameter_combinations.append(
                         {
