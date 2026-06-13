@@ -11,12 +11,8 @@ from collections import defaultdict
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-<<<<<<< HEAD
 from sklearn.metrics import silhouette_score, adjusted_rand_score
 from sklearn.model_selection import KFold
-=======
-from sklearn.metrics import silhouette_score
->>>>>>> 6971713187426ef4701a5bc4eeed45b8e4fb1f86
 from scipy.spatial import distance
 from scipy.stats import spearmanr
 
@@ -586,7 +582,7 @@ def cross_validate(
     (cv_path / "cv_summary.json").write_text(json.dumps(cv_summary, indent=2))
 
     logging.info(
-        f"CV done - P1: avg_test_ari={cv_summary["protocol_ari"]["avg_test_ari"]:.4f} | "
+        f"CV done - P1: avg_test_ari={cv_summary['protocol_ari']['avg_test_ari']:.4f} | "
         f"P2: avg_test_lscd={cv_summary['protocol_lscd']['avg_test_lscd']:.4f}"
     )
 
@@ -605,7 +601,6 @@ def get_predictions(
     words = scores.word.unique()
     jsd = {}
     pred_clusters_per_word = {}
-
 
     for word in words:
         mask = scores["word"] == word
@@ -669,7 +664,6 @@ def get_predictions(
         }
 
         pred_clusters_per_word[word] = pred_clusters
-
 
         id1_map = (
             filtered_scores[["identifier1", "sentence1"]]
@@ -902,7 +896,6 @@ def eval(
         run_path = Path(experiments_path, "runs", run_id)
 
         if metadata["method"] in ["ac", "sc"]:
-<<<<<<< HEAD
             jsd, _ = get_predictions(
                 get_clusters,
                 scores,
@@ -912,26 +905,12 @@ def eval(
             )
         else:
             jsd, _ = get_predictions_no_clusters(
-=======
-            jsd = get_predictions(
->>>>>>> 6971713187426ef4701a5bc4eeed45b8e4fb1f86
                 get_clusters,
                 scores,
                 hyperparameters,
                 metadata=metadata,
                 run_path=run_path,
             )
-<<<<<<< HEAD
-=======
-        else:
-            jsd = get_predictions_no_clusters(
-                get_clusters,
-                scores,
-                hyperparameters,
-                metadata=metadata,
-                run_path=run_path,
-            )
->>>>>>> 6971713187426ef4701a5bc4eeed45b8e4fb1f86
 
         logging.info("  calculating correlation ...")
         spr = calculate_correlation(jsd, metadata["path_to_gold_data"])
