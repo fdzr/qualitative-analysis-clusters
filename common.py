@@ -253,7 +253,7 @@ def generate_and_save_folds(
 
 
 def load_gold_senses(path: str):
-    df = pd.read_csv(path)
+    df = pd.read_csv(path, sep="\t")
     return dict(zip(df["identifier"], df["cluster"]))
 
 
@@ -266,8 +266,18 @@ def build_english_gold_index(gold_dir: str) -> dict:
     return index
 
 
+def build_spanish_gold_index(gold_dir: str) -> dict:
+    index = {}
+    for path in Path(gold_dir).glob("*.csv"):
+        word = unicodedata.normalize("NFC", path.stem)
+        index[word] = str(path)
+
+    return index
+
+
 def get_spanish_gold_path(gold_dir: str, word: str):
-    return str(Path(gold_dir) / f"{word}.csv")
+    normalized_word = unicodedata.normalize("NFC", word)
+    return str(Path(gold_dir) / f"{normalized_word}.csv")
 
 
 def compute_ari_for_word(pred_clusters: dict, gold_senses: dict) -> float:
@@ -288,18 +298,21 @@ def calculate_ari_across_words(
     dataset: str,
 ) -> float:
 
+    if dataset == "dwug_es":
+        index = build_spanish_gold_index(gold_dir)
+    else:
+        index = build_english_gold_index(gold_dir)
+
     scores = []
     for word in words:
         if word not in pred_clusters_per_word:
             continue
-        if dataset == "dwug_es":
-            gold_path = get_spanish_gold_path(gold_dir, word)
-        else:
-            index = build_english_gold_index(gold_dir)
-            gold_path = index.get(word)
-            if gold_path is None:
-                logging.warning(f"No gold file found for word: {word}")
-                continue
+
+        normalized_word = unicodedata.normalize("NFC", word)
+        gold_path = index.get(normalized_word)
+        if gold_path is None:
+            logging.warning(f"No gold file found for word: {word}")
+            continue
 
         gold_senses = load_gold_senses(gold_path)
         ari = compute_ari_for_word(pred_clusters_per_word[word], gold_senses)
