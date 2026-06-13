@@ -374,6 +374,7 @@ def generate_hyperparameter_combinations(
     model_hyperparameter_combinations: list,
     normalize: bool,
     thresholds: typing.List | None,
+    skip_distribution_filter: bool = False,
 ):
     hyperparameter_combinations = []
 
@@ -381,17 +382,18 @@ def generate_hyperparameter_combinations(
         for nm in [False] if normalize is False else [False, True]:
             for quantile, threshold in (thresholds if thresholds else [(None, None)]):
                 for combination in model_hyperparameter_combinations:
-                    if "distribution" in combination:
-                        if (
-                            combination["distribution"].startswith("discrete")
-                            and normalize is True
-                        ):
-                            continue
-                        if (
-                            combination["distribution"].startswith("real")
-                            and normalize is False
-                        ):
-                            continue
+                    if not skip_distribution_filter and "distribution" in combination:
+                        if "distribution" in combination:
+                            if (
+                                combination["distribution"].startswith("discrete")
+                                and normalize is True
+                            ):
+                                continue
+                            if (
+                                combination["distribution"].startswith("real")
+                                and normalize is False
+                            ):
+                                continue
 
                     hyperparameter_combinations.append(
                         {
@@ -424,6 +426,10 @@ def cross_validate(
         model_hyperparameter_combinations,
         metadata["normalize"],
         thresholds,
+        skip_distribution_filter=metadata.get(
+            "skip_distribution_filter",
+            False,
+        ),
     )
 
     experiments_path = (
