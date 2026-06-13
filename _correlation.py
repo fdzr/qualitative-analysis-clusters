@@ -20,8 +20,6 @@ except ImportError:
 
 from collections import defaultdict
 
-import multiprocessing as mp
-
 import networkx as nx
 import numpy as np
 import mlrose_hiive as mlrose
@@ -109,20 +107,32 @@ def cluster_correlation_search(
     l2s[loss_init].append((init_state, len(classes)))
 
     # Initialize multiprocessing.Pool()
-    pool = mp.Pool(mp.cpu_count())
+    # pool = mp.Pool(mp.cpu_count())
     # pool = mp.Pool(1)
     # print(mp.cpu_count())
 
     # `pool.apply`
-    solutions = pool.starmap(
-        Linear_loss.optimize_simulated_annealing,
-        [
-            (n, classes, list(G.nodes()), init_state, max_attempts, max_iters)
-            for n in range(2, max_senses)
-        ],
-    )
-    pool.close()
+    # solutions = pool.starmap(
+    #     Linear_loss.optimize_simulated_annealing,
+    #     [
+    #         (n, classes, list(G.nodes()), init_state, max_attempts, max_iters)
+    #         for n in range(2, max_senses)
+    #     ],
+    # )
+    # pool.close()
     # print(solutions[0])
+
+    solutions = [
+        Linear_loss.optimize_simulated_annealing(
+            n,
+            classes,
+            list(G.nodes()),
+            init_state,
+            max_attempts,
+            max_iters,
+        )
+        for n in range(2, max_senses)
+    ]
 
     # Merge solutions
     for l2s_ in solutions:
