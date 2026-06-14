@@ -799,12 +799,19 @@ def get_predictions(
                     )
                     continue
 
-                score = silhouette_score(
-                    distance_matrix,
-                    labels,
-                    metric="precomputed",
-                )
-                logging.info(f" n_clusters={n} silhouette={score:.4f}")
+                if cluster_selection_method == "silhouette":
+                    score = silhouette_score(
+                        distance_matrix,
+                        labels,
+                        metric="precomputed",
+                    )
+                else:
+                    score = calinski_harabasz_score(
+                        adj_matrix,
+                        labels,
+                    )
+
+                logging.info(f" n_clusters={n} {cluster_selection_method}={score:.4f}")
                 if score > best_silhouette:
                     best_silhouette = score
                     best_labels = labels
@@ -813,6 +820,7 @@ def get_predictions(
                 logging.warning(
                     f"  all cluster attempts failed for word {word}, skipping"
                 )
+                continue
 
         logging.info(
             f" best n_clusters={best_labels.max() + 1} silhouette={best_silhouette:.4f}"
