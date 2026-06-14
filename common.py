@@ -11,7 +11,11 @@ from collections import defaultdict
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import silhouette_score, adjusted_rand_score
+from sklearn.metrics import (
+    silhouette_score,
+    adjusted_rand_score,
+    calinski_harabasz_score,
+)
 from sklearn.model_selection import KFold
 from scipy.spatial import distance
 from scipy.stats import spearmanr
@@ -217,6 +221,16 @@ def get_scaler(scores: pd.Series):
 
 def get_thresholds(scores: pd.Series):
     return [(i, float(np.quantile(scores, i / 10))) for i in range(1, 10)]
+
+
+def eigengap_n_clusters(adj_matrix: np.ndarray, max_k: int = 5) -> int:
+    D = np.diag(adj_matrix.sum(axis=1))
+    L = D - adj_matrix
+    D_inv_sqrt = np.diag(1.0 / np.sqrt(np.diag(D) + 1e-10))
+    L_norm = D_inv_sqrt @ L @ D_inv_sqrt
+    eigenvalues = sorted(np.linalg.eigh(L_norm)[0])
+    gaps = [eigenvalues[i + 1] - eigenvalues[i] for i in range(1, max_k)]
+    return gaps.index(max(gaps)) + 2
 
 
 def _next_run_id(experiments_path: str):
