@@ -778,6 +778,11 @@ def get_predictions(
                 "n_clusters": best_n,
             }
             best_labels = get_clusters(adj_matrix, hyperparams)
+            if best_labels is None or len(set(best_labels)) < 2:
+                logging.warning(
+                    f"eigengap produced invalid clustering for word {word}, skipping"
+                )
+                continue
         else:
             distance_matrix = adj_matrix.max() - adj_matrix
             np.fill_diagonal(distance_matrix, 0)
@@ -823,7 +828,7 @@ def get_predictions(
                 continue
 
         logging.info(
-            f" best n_clusters={best_labels.max() + 1} silhouette={best_silhouette:.4f}"
+            f" best n_clusters={best_labels.max() + 1} {cluster_selection_method}={best_silhouette:.4f}"
         )
 
         pred_clusters = {
