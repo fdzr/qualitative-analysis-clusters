@@ -407,12 +407,106 @@ def generate_hyperparameter_combinations(
     return hyperparameter_combinations
 
 
+def compute_apd_for_word(filtered_scores: pd.DataFrame, normalize: bool) -> float:
+    is_old1 = filtered_scores["identifier1"].str.startswith("old")
+    is_old2 = filtered_scores["identifier2"].str.startswith("old")
+
+    mask_cross = (is_old1 & is_old2) | (~is_old1 & is_old2)
+    cross_scores = filtered_scores[mask_cross]["prediction"].astype(float)
+
+    if len(cross_scores) == 0:
+        return 0.0
+
+    return float((1 - cross_scores).mean())
+
+
+def calculate_spearman_for_words(
+    scores_per_word: dict,
+    path_to_gold_data: str,
+    words: list,
+) -> float:
+    gold_data = get_gold_data(path_to_gold_data)
+    pred, gold = [], []
+
+    for word in words:
+        processed = unicodedata.normalize("NFC", word)
+        if processed not in scores_per_word or processed not in gold_data:
+            continue
+
+        pred.append(scores_per_word[processed])
+        gold.append(gold_data[processed][0])
+
+    if len(pred) < 2:
+        return 0.0
+
+    return spearmanr(gold, pred)[0]
+
+
+def cross_validate_apd(
+    metadata: dict,
+    k: int = 5,
+    folds_path: str = None,
+) -> dict:
+    data = load_data(metadata["path_to_data"])
+
+    gold_data = get_gold_data(metadata["path_to_gold_data"])
+    target_words = set(unicodedata.normalize("NFC", w) for w in gold_data.keys())
+    data = data[
+        data["word"].apply(lambda w: unicodedata.normalize("NFC", w) in target_words)
+    ]
+    experiments_path = f"./results/apd/{metadata['dataset']}/{metadata['model']}"
+
+    if folds_path and Path(folds_path).exists():
+        folds = json.loads(Path(folds_path).read_text())
+        logging.info(f"loaded folds from {folds_path}")
+    else:
+        folds = generate_and_save_folds(data, experiments_path, k=k)
+
+    cv_results = []
+
+    for fold_name, fold_data in folds.items():
+        logging.info(f"processing {fold_name} ...")
+        test_words = fold_data["test"]
+        test_scores = data[data["word"].isin(test_words)]
+
+        apd_per_word = {}
+        for word in test_words:
+            filtered = test_scores[test_scores["word"] == word]
+            apd_per_word[unicodedata.normalize("NFC", word)] == compute_apd_for_word(
+                filtered,
+                metadata["normalize"],
+            )
+
+        test_lscd = calculate_spearman_for_words(
+            apd_per_word,
+            metadata["path_to_gold_data"],
+            test_words,
+        )
+
+        fold_path = Path(experiments_path, "cv", fold_name)
+        fold_path.mkdir(parents=True, exist_ok=True)
+        (fold_path / "results.json").write_text(
+            json.dumps({"test_lscd": test_lscd}, indent=2)
+        )
+
+        cv_results.append(test_lscd)
+        logging.info(f"{fold_name} - test_lscd={test_lscd:.4f}")
+
+    cv_summary = {"avg_test_lscd": sum(cv_results) / k}
+    cv_path = Path(experiments_path, "cv")
+    (cv_path / "cv_summary.json").write_text(json.dumps(cv_summary, indent=2))
+    logging.info(f"APD CV done - avg_test_lscd={cv_summary['avg_test_lscd']:.4f}")
+
+    return cv_summary
+
+
 def cross_validate(
     get_clusters: typing.Callable,
     model_hyperparameter_combinations: list,
     metadata: dict,
     gold_dir: str,
     k: int = 5,
+    folds_path: str = None,
 ):
     data = load_data(metadata["path_to_data"])
     thresholds = (
@@ -434,9 +528,14 @@ def cross_validate(
     experiments_path = (
         f"./results/{metadata['method']}/{metadata['dataset']}/{metadata['model']}"
     )
-    folds = generate_and_save_folds(data, experiments_path, k=k)
-    cv_results = []
 
+    if folds_path and Path(folds_path).exists():
+        folds = json.loads(Path(folds_path).read_text())
+        logging.info(f"loaded folds from {folds_path}")
+    else:
+        folds = generate_and_save_folds(data, experiments_path, k=k)
+
+    cv_results = []
     for fold_name, fold_data in folds.items():
         logging.info(f"processing {fold_name} ...")
 
