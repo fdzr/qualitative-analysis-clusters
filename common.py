@@ -539,9 +539,12 @@ def cross_validate(
         ),
     )
 
+    selection = metadata.get("cluster_selection_method", "")
     experiments_path = (
         f"./results/{metadata['method']}/{metadata['dataset']}/{metadata['model']}"
     )
+    if selection:
+        experiments_path = f"{experiments_path}/{selection}"
 
     if folds_path and Path(folds_path).exists():
         folds = json.loads(Path(folds_path).read_text())
@@ -578,6 +581,7 @@ def cross_validate(
                     metadata=metadata,
                     run_path=dummy_path,
                     save_clusters=False,
+                    cluster_selection_method=selection if selection else "silouette",
                 )
             else:
                 train_jsd, train_pred = get_predictions_no_clusters(
@@ -618,6 +622,7 @@ def cross_validate(
                 metadata=metadata,
                 run_path=test_path_ari,
                 save_clusters=True,
+                cluster_selection_method=selection if selection else "silhouette",
             )
         else:
             test_jsd_ari, test_pred_ari = get_predictions_no_clusters(
@@ -650,6 +655,7 @@ def cross_validate(
                 metadata=metadata,
                 run_path=test_path_lscd,
                 save_clusters=True,
+                cluster_selection_method=selection if selection else "silhouette",
             )
         else:
             test_jsd_lscd, test_pred_lscd = get_predictions_no_clusters(
@@ -727,6 +733,7 @@ def get_predictions(
     metadata: dict,
     run_path: Path,
     save_clusters: bool = True,
+    cluster_selection_method: str = "silouette",
 ):
     logging.info("get predictions ...")
     words = scores.word.unique()
@@ -761,38 +768,51 @@ def get_predictions(
             hyperparameter_combinations.get("threshold", None),
         )
 
-        distance_matrix = adj_matrix.max() - adj_matrix
-        np.fill_diagonal(distance_matrix, 0)
         best_silhouette = -1
         best_labels = None
 
-        for n in range(2, 6):
+        if cluster_selection_method == "eigengap":
+            best_n = eigengap_n_clusters(adj_matrix, max_k=5)
             hyperparams = {
                 **hyperparameter_combinations["model_hyperparameters"],
-                "n_clusters": n,
+                "n_clusters": best_n,
             }
+            best_labels = get_clusters(adj_matrix, hyperparams)
+        else:
+            distance_matrix = adj_matrix.max() - adj_matrix
+            np.fill_diagonal(distance_matrix, 0)
 
-            labels = get_clusters(
-                adj_matrix,
-                hyperparams,
-            )
+            for n in range(2, 6):
+                hyperparams = {
+                    **hyperparameter_combinations["model_hyperparameters"],
+                    "n_clusters": n,
+                }
 
-            if len(set(labels)) < 2:
-                logging.warning(f"  n_clusters={n} produced only 1 cluster, skipping")
-                continue
+                labels = get_clusters(
+                    adj_matrix,
+                    hyperparams,
+                )
 
-            score = silhouette_score(
-                distance_matrix,
-                labels,
-                metric="precomputed",
-            )
-            logging.info(f" n_clusters={n} silhouette={score:.4f}")
-            if score > best_silhouette:
-                best_silhouette = score
-                best_labels = labels
+                if len(set(labels)) < 2:
+                    logging.warning(
+                        f"  n_clusters={n} produced only 1 cluster, skipping"
+                    )
+                    continue
 
-        if best_labels is None:
-            logging.warning(f"  all cluster attempts failed for word {word}, skipping")
+                score = silhouette_score(
+                    distance_matrix,
+                    labels,
+                    metric="precomputed",
+                )
+                logging.info(f" n_clusters={n} silhouette={score:.4f}")
+                if score > best_silhouette:
+                    best_silhouette = score
+                    best_labels = labels
+
+            if best_labels is None:
+                logging.warning(
+                    f"  all cluster attempts failed for word {word}, skipping"
+                )
 
         logging.info(
             f" best n_clusters={best_labels.max() + 1} silhouette={best_silhouette:.4f}"
@@ -938,9 +958,13 @@ def eval(
 
     metadata["name_file"] = "results_testing_set"
 
+    selection = metadata.get("cluster_selection_method", "")
     experiments_path = (
         f"./results/{metadata['method']}/{metadata['dataset']}/{metadata['model']}"
     )
+    if selection:
+        experiments_path = f"{experiments_path}/{selection}"
+
     Path(experiments_path, "runs").mkdir(parents=True, exist_ok=True)
 
     results = {}
