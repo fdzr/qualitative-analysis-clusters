@@ -411,7 +411,7 @@ def compute_apd_for_word(filtered_scores: pd.DataFrame, normalize: bool) -> floa
     is_old1 = filtered_scores["identifier1"].str.startswith("old")
     is_old2 = filtered_scores["identifier2"].str.startswith("old")
 
-    mask_cross = (is_old1 & is_old2) | (~is_old1 & is_old2)
+    mask_cross = (is_old1 & ~is_old2) | (~is_old1 & is_old2)
     cross_scores = filtered_scores[mask_cross]["prediction"].astype(float)
 
     if len(cross_scores) == 0:
@@ -472,7 +472,7 @@ def cross_validate_apd(
         apd_per_word = {}
         for word in test_words:
             filtered = test_scores[test_scores["word"] == word]
-            apd_per_word[unicodedata.normalize("NFC", word)] == compute_apd_for_word(
+            apd_per_word[unicodedata.normalize("NFC", word)] = compute_apd_for_word(
                 filtered,
                 metadata["normalize"],
             )
