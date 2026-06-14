@@ -581,7 +581,7 @@ def cross_validate(
                     metadata=metadata,
                     run_path=dummy_path,
                     save_clusters=False,
-                    cluster_selection_method=selection if selection else "silouette",
+                    cluster_selection_method=selection if selection else "silhouette",
                 )
             else:
                 train_jsd, train_pred = get_predictions_no_clusters(
@@ -733,7 +733,7 @@ def get_predictions(
     metadata: dict,
     run_path: Path,
     save_clusters: bool = True,
-    cluster_selection_method: str = "silouette",
+    cluster_selection_method: str = "silhouette",
 ):
     logging.info("get predictions ...")
     words = scores.word.unique()
