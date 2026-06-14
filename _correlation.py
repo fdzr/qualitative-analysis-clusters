@@ -267,7 +267,7 @@ class Loss(object):
         # Define decay schedule
         schedule = mlrose.ExpDecay()
         # Solve problem using simulated annealing
-        best_state, best_fitness = mlrose.simulated_annealing(
+        best_state, best_fitness, *_ = mlrose.simulated_annealing(
             problem,
             schedule=schedule,
             init_state=init_state,
@@ -290,7 +290,7 @@ class Loss(object):
         )
 
         schedule = mlrose.ExpDecay()
-        best_state, best_fitness = mlrose.simulated_annealing(
+        best_state, best_fitness, *_ = mlrose.simulated_annealing(
             problem,
             schedule=schedule,
             max_attempts=max_attempts,
