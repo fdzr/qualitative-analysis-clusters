@@ -274,7 +274,7 @@ def load_gold_senses(path: str):
 def build_english_gold_index(gold_dir: str) -> dict:
     index = {}
     for path in Path(gold_dir).glob("*.csv"):
-        word = path.stem.rsplit("_", 1)[0]
+        word = path.stem
         index[word] = str(path)
 
     return index
@@ -324,12 +324,24 @@ def calculate_ari_across_words(
 
         normalized_word = unicodedata.normalize("NFC", word)
         gold_path = index.get(normalized_word)
+
         if gold_path is None:
-            logging.warning(f"No gold file found for word: {word}")
             continue
 
         gold_senses = load_gold_senses(gold_path)
-        ari = compute_ari_for_word(pred_clusters_per_word[word], gold_senses)
+
+        pred = pred_clusters_per_word[word]
+        if dataset != "dwug_es":
+            pred = {
+                (
+                    k[4:]
+                    if k.startswith("old_")
+                    else (k[7:] if k.startswith("modern_") else k)
+                ): v
+                for k, v in pred.items()
+            }
+
+        ari = compute_ari_for_word(pred, gold_senses)
         scores.append(ari)
 
     return sum(scores) / len(scores) if scores else 0.0
