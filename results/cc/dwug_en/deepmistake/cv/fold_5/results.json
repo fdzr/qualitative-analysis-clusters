@@ -1,0 +1,30 @@
+{
+  "protocol_ari": {
+    "best_params": {
+      "fill_diagonal": true,
+      "normalize": true,
+      "quantile": 9,
+      "threshold": 0.5425713095000001,
+      "model_hyperparameters": {
+        "threshold_cc": 0.5
+      }
+    },
+    "train_ari": 0.15431242302993511,
+    "test_ari": 0.209885492496382,
+    "test_lscd": 0.24325638628366394
+  },
+  "protocol_lscd": {
+    "best_params": {
+      "fill_diagonal": true,
+      "normalize": true,
+      "quantile": 9,
+      "threshold": 0.5425713095000001,
+      "model_hyperparameters": {
+        "threshold_cc": 0.5
+      }
+    },
+    "train_lscd": 0.3733524329203739,
+    "test_lscd": 0.24325638628366394,
+    "test_ari": 0.209885492496382
+  }
+}

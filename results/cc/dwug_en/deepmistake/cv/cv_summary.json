@@ -1,0 +1,14 @@
+{
+  "protocol_ari": {
+    "avg_test_ari": 0.1624888392221506,
+    "std_test_ari": 0.061194941495162136,
+    "avg_test_lscd": 0.423030180335562,
+    "std_test_lscd": 0.27592682932041945
+  },
+  "protocol_lscd": {
+    "avg_test_lscd": 0.423030180335562,
+    "std_test_lscd": 0.27592682932041945,
+    "avg_test_ari": 0.1624888392221506,
+    "std_test_ari": 0.061194941495162136
+  }
+}

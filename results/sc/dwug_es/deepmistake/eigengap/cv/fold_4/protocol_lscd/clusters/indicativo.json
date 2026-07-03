@@ -1,0 +1,181 @@
+{
+  "word": "indicativo",
+  "n_clusters": 3,
+  "clusters": [
+    {
+      "id": 0,
+      "sentences": [
+        {
+          "id": "modern_corpus_spanish-177441-312",
+          "text": "Asimismo, los ciudadanos pueden identificar la imagen de la \"superburocracia\" europea con estos actos. Aunque el informe recomienda no usar el Derecho indicativo en documentos comunitarios y que no se reconozca la distinción entre dura lex y mollis lex, no considero que esto sea una cuestión relevante. La diferencia entre actos comunitarios vinculantes y no vinculantes es una cuestión de hecho y esta recomendación no cambia ni la realidad de su existencia ni su esencia."
+        },
+        {
+          "id": "old_corpus_spanish-109506-568",
+          "text": "No cabe decir, dudo que continúan, ni dudo que continuaron, ni dudo que continuarán, ni dudé que continuaban, ni dudé que continuarían; sino dudo que continúen, dudo o dudé que continuasen o continuaran. Por consiguiente, las formas continúen y continuasen o continuaran no son indicativas; ellas pertenecen a otro Modo distinto, que es el que los gramáticos llaman subjuntivo, porque figuran a menudo en proposiciones subjuntas, esto es, subordinadas. Nosotros le llamaremos, por la variedad de sus aplicaciones, subjuntivo común, para distinguirle de otro subjuntivo de carácter peculiar y de mucho más limitado uso, de que después hablaremos."
+        },
+        {
+          "id": "old_corpus_spanish-109514-90",
+          "text": "455 (215). Formas indicativas o de modo indicativo se llaman las que son o pueden ser regidas por los verbos saber, afirmar, no precedidos de negación. 456 (a)."
+        },
+        {
+          "id": "old_corpus_spanish-109533-48",
+          "text": "460 (217). El Modo indicativo sirve para los juicios afirmativos o negativos, sea de la persona que habla, sea de otra persona indicada en la proposición de que dependa el verbo. «Vives tranquilo en esa morada solitaria adonde no llegan las agitaciones que amargan aquí nuestra existencia»."
+        },
+        {
+          "id": "old_corpus_spanish-109607-723",
+          "text": "La frase se nos ha prevenido no tiene este carácter, porque supone subsistente el imperio de la prevención; y de aquí es que su régimen puede ser como el del presente o como el del pretérito: «Se nos ha prevenido que si alguien llegare o llega, o que si alguien llegaba, llegase o llegara. Pero si la condición no es precedida de si, se excluye siempre el indicativo. 475 (223)."
+        },
+        {
+          "id": "old_corpus_spanish-109677-435",
+          "text": "493 (240). Cada conjugación tiene ciertas inflexiones peculiares en los tiempos que nacen de la raíz general, pero en los que nacen de la raíz especial, que, como hemos dicho, son el futuro y el pos-pretérito de indicativo, todos los verbos regulares son absolutamente uniformes; por lo que podemos decir que en estos tiempos hay una sola conjugación. 494 (241)."
+        },
+        {
+          "id": "old_corpus_spanish-109735-745",
+          "text": "Así contender, cuya raíz es contend, la muda en contiend para las formas de este orden: contiend-o, es, e, en; contiend-a, as, a, an; contiend-e tú. El tercero (peculiar de la tercera conjugación) comprende aquellas formas en que no se sigue a la raíz una i acentuada; que son la primera, segunda y tercera persona, de singular y la tercera de plural del presente de indicativo; las terceras personas del pretérito de indicativo; todo el subjuntivo; el singular del imperativo, y el gerundio. Tomemos por ejemplo a concebir."
+        },
+        {
+          "id": "old_corpus_spanish-109743-848",
+          "text": "Encuéntrase a la verdad esta consonante y en otras formas, como arguyeron, arguyera, arguyendo; pero en ellas no es más que un accidente de la conjugación regular, que pide se convierta la i no aguda que se halla entre dos vocales, en la consonante y, subsistiendo sin alteración la raíz: argu-yeron (por argu-ieron), argu-yera (por argu-iera), etc. El quinto orden o grupo de formas afines comprende los pretéritos de indicativo y subjuntivo, y el futuro de subjuntivo. Así andar, cuya raíz es and, la muda en anduv para todas las formas de este orden."
+        },
+        {
+          "id": "old_corpus_spanish-110066-478",
+          "text": "575. Tener, venir, y sus respectivos compuestos tienen cinco raíces, teng y veng, para las formas de la primera familia; tien, vien, para las formas de la segunda que no le son comunes con la primera; tuv, vin, para los pretéritos de indicativo y subjuntivo, y para el futuro de subjuntivo; tendr, vendr, para el futuro y pos-pretérito de indicativo; y para las otras la regular ten, ven. Ejemplo, tener"
+        },
+        {
+          "id": "old_corpus_spanish-110171-488",
+          "text": "596 (a). La Academia cuenta entre los defectivos a concernir, que, según ella, no se usa sino en las terceras personas concierne, conciernen, concernía, concernían, y en el gerundio concerniendo; pero tal vez no disonarían el pretérito de indicativo concernió, concernieron; ni el presente, pretérito y futuro de subjuntivo concierna, conciernan, concerniese o concerniera, concerniesen o concernieran, concerniere, concernieren. Este verbo en las inflexiones que admite debe sin duda imitar a discernir."
+        },
+        {
+          "id": "old_corpus_spanish-110223-156",
+          "text": "609 (b). La terminación de la segunda persona de plural del pretérito de indicativo no fue jamás en tedes sino en tes: amastes, vistes, partistes. Las terminaciones amástedes, temístedes, son imaginarias, sugeridas sin duda por la aparente analogía de los otros tiempos."
+        },
+        {
+          "id": "old_corpus_spanish-110422-213",
+          "text": "653 (296). En el subjuntivo común no hay más que dos formas simples correspondientes a las cinco del indicativo: cante, presente y futuro; cantase o cantara, pretérito, co-pretérito y pos-pretérito. Y si tal es el plan de las formas simples, parece que, según lo arriba dicho (§ 289), el de las formas compuestas debería ser éste: haya cantado, ante-presente y ante-futuro; hubiese o hubiera cantado, ante-pretérito, ante-co-pretérito y ante-pos-pretérito."
+        },
+        {
+          "id": "old_corpus_spanish-110427-60",
+          "text": "La razón es obvia. En el indicativo se hace diferencia entre el ante-pretérito y el ante-co-pretérito, porque hay una forma peculiar para el primero; si no la hubiese, sucedería lo que en el indicativo latino: una misma forma se aplicaría a todos los casos en que se comparan dos hechos pasados sucesivos, y dejando indefinido el intervalo entre ellos, sería en rigor un ante-co-pretérito (§ 294). Todo aparecerá claramente en el paralelo que sigue entre el indicativo y el subjuntivo común."
+        },
+        {
+          "id": "old_corpus_spanish-110508-500",
+          "text": "663 (304). Hemos visto que después del condicional si no pueden usarse en presente o futuro, ante-presente o ante-futuro, las formas del subjuntivo común; y precisamente en este caso, no en otro, es cuando el hipotético puede tomar prestadas al indicativo las formas correspondientes, es a saber, el presente canto, y el ante-presente he cantado. Pero lo más digno de notar es que el indicativo en este uso hipotético asume de tal manera el carácter de subjuntivo, que su presente se hace aplicable, con igual propiedad al futuro, y su ante-presente al ante-futuro."
+        },
+        {
+          "id": "old_corpus_spanish-110516-553",
+          "text": "Habrían sido igualmente propios sucediere y hubiere; pero sólo poniendo en lugar de si otra expresión condicional, serían admisibles suceda y haya: «Dado caso que no te suceda a ti…»; «Y como haya viento próspero…». Y verificada esta sustitución, no tendría ya cabida el indicativo. 664 (305)."
+        },
+        {
+          "id": "old_corpus_spanish-110548-658",
+          "text": "Entonces, además de su valor primitivo, admite otro, en que el presente pasa a futuro, y co a pos: el presente canto se hace futuro, el co-pretérito cantaba, pos-pretérito, el ante-presente he cantado, ante-futuro, y el ante-co-pretérito había cantado, ante-pos-pretérito. Queda ya explicado suficientemente este oficio del indicativo en lo que se ha dicho sobre el subjuntivo hipotético. 671."
+        },
+        {
+          "id": "old_corpus_spanish-110566-762",
+          "text": "Es visto que subsiste la misma relación de coexistencia que antes entre el envejecerse y el percibir, entre el bajarse y el notar, entre el debilitarse y el observar; pero el percibir, el notar y el observar son ahora pos-pretéritos, porque significan acciones futuras respecto del decir, que con respecto al momento en que se habla es cosa pasada. Luego los co-pretéritos de indicativo tienen aquí el valor de pos-pretéritos. 674 (c)."
+        },
+        {
+          "id": "old_corpus_spanish-110900-839",
+          "text": "Ésta es mucho peor que la precedente, y va cundiendo bastante aun en el lenguaje de escritores generalmente castizos y correctos. No puede usarse el pretérito de subjuntivo, sino cuando envuelve una relación verdadera o metafórica de anterioridad; sería pues un solecismo: «Si hubiese comedia esta noche, iré a verla»; expresándose un mero futuro, el tiempo propio es si hubiere o (adoptando el uso secundario del indicativo) si hay. Ni puede usarse el ante-co-pretérito de subjuntivo sino cuando con él se significan dos relaciones de anterioridad, ambas verdaderas o una de ellas metafórica; no sería pues tolerable: «Mañana, si hubiese llegado el gobernador, iremos a saludarle»; porque el tiempo de la llegada es un ante-futuro, que sólo se expresaría correctamente con hubiere o ha llegado."
+        },
+        {
+          "id": "old_corpus_spanish-111810-40",
+          "text": "906 (d). En el indicativo pueden preceder o seguir: «Mandole que viniese»; «Le mandó que viniese». Pero la primera colocación es mucho menos usada (sobre todo en prosa) cuando el verbo no es la primera palabra de la oración."
+        },
+        {
+          "id": "old_corpus_spanish-113585-294",
+          "text": "3. Aunque, en su contraposición a pero, conserva su carácter de adverbio, encabezando una proposición subordinada cuyo verbo puede ponerse en indicativo o subjuntivo; al paso que la proposición encabezada por pero no admite otras formas que las que pertenecen a proposiciones independientes. Pero, a la verdad, se adverbializa, mas no se hace adverbio relativo, sino equivalente a un complemento demostrativo (sin embargo de eso)."
+        },
+        {
+          "id": "old_corpus_spanish-574621-271",
+          "text": "» Cuando, por fin, ya derrengado, me adormecí, aquella frase se convirtió en un verbo que no tenía más remedio que conjugar. Modo indicativo, tiempo presente. «No vayas a casa."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "sentences": [
+        {
+          "id": "modern_corpus_spanish-357187-430",
+          "text": "En Vojvodina, el valor de la tasa comenzó a aumentar de nuevo en 1996 después de una disminución en 1994. El inquietante aumento de la mortalidad posneonatal en Serbia central en 1995 y en Vojvodina en 1996 es indicativo del efecto de los factores exógenos en la salud de los niños pequeños. La mortalidad materna, que refleja todos los riesgos sanitarios de la madre durante el embarazo, en el parto y en el puerperio (el período de seis semanas después del parto), está directamente determinada por las condiciones socioeconómicas, las condiciones sanitarias de la madre durante el embarazo, las complicaciones durante el embarazo y en el parto, así como por el acceso a los servicios médicos, particularmente de protección prenatal y obstétrica."
+        },
+        {
+          "id": "modern_corpus_spanish-366280-1345",
+          "text": "Panamá Entendemos que dentro del esquema tradicional de la protección diplomática clásica, el proyecto de artículo 8, en particular, sobre la protección diplomática de apátridas y refugiados no sólo es pertinente y justificado, sino que efectivamente constituye un elemento de desarrollo progresivo del derecho internacional, ya que la adopción de la misma norma de protección tanto para los apátridas como para los refugiados, cuyo elemento de conexión sea la residencia legal y habitual de estas personas en un Estado determinado —siempre que, además, concurran otros requisitos de hecho (vínculos familiares, centro de intereses, actividades profesionales, etc.), indicativos de la conexión genuina del individuo con tal Estado—, resulta ser el remedio adecuado para esas dos categorías de personas. Qatar"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sentences": [
+        {
+          "id": "modern_corpus_spanish-166784-457",
+          "text": "por escrito. - El 1 de julio de 2010 la Comisión presentó un Libro Verde sobre opciones para avanzar hacia un Derecho contractual europeo para consumidores y empresas. Entre las opciones se incluyen alternativas de derecho indicativo, un régimen de participación optativa denominado sistema del 28º, la improbable aproximación del Derecho sustantivo nacional (debida a la resistencia del Consejo y a la imposibilidad de fusionar de la noche a la mañana las tradiciones jurídicas nacionales) y la opción de crear un código civil propiamente dicho. Doy todo mi apoyo al informe, especialmente en el contexto de las violaciones de los derechos humanos en la República de Letonia."
+        },
+        {
+          "id": "modern_corpus_spanish-186587-264",
+          "text": "La cooperación estuvo bloqueada durante varios años, y hace cinco se inició una cooperación parcial. Es verdad que el programa indicativo nacional del octavo Fondo Europeo de Desarrollo, firmado en julio de 2000, señaló como sector prioritario para nuestra acción el apoyo a la democracia, los derechos humanos, la sociedad civil y el Estado de Derecho. Y se establece además que la puesta a disposición de los fondos europeos para otras acciones está sujeta a los esfuerzos constatados del Gobierno guineano en este campo."
+        },
+        {
+          "id": "modern_corpus_spanish-203034-330",
+          "text": "Por consiguiente, la Comisión no puede aprobar las enmiendas 22 y 23. Por lo demás, la Comisión aprueba la primera parte de la enmienda nº 26 sobre el programa indicativo de acción. En cambio, consideramos que la tabla que figura en la segunda parte de la enmienda nº 26 es opuesta a las prioridades del programa."
+        },
+        {
+          "id": "modern_corpus_spanish-216741-340",
+          "text": "Esta información supone un avance en la dirección correcta, pero habrá que tomar aún nuevos pasos. Es conveniente que en los próximos años se establezca el objetivo indicativo del rendimiento, sobre cuya base los interventores de cuentas podrán hacer el balance de los resultados de las inversiones con relación al objetivo previamente fijado. Asimismo, es importante evaluar durante los próximos años si el desmantelamiento de las antiguas actividades de la CECA se va realizando según los planes."
+        },
+        {
+          "id": "modern_corpus_spanish-247493-617",
+          "text": "Para los ciudadanos europeos, la propuesta intenta clarificar la vigente sobre el movimiento de productos de un Estado miembro a otro. En efecto, viendo el número de preguntas que la Comisión recibe diariamente sobre esta cuestión, está claro que la normativa actual, incluido el valor de los «niveles indicativos», crea confusión. La propuesta clarifica esta cuestión y también mejora las posibilidades de los ciudadanos de comprar artículos que han pagado los impuestos en el Estado miembro de su elección, sin tener que declararlos ni pagar impuestos por ellos en su propio Estado miembro."
+        },
+        {
+          "id": "modern_corpus_spanish-247537-725",
+          "text": "Por supuesto, no hay una respuesta sencilla; sin embargo, la experiencia de las reformas económicas que hemos aplicado los nuevos Estados miembros constituye una prueba sólida de que se obtienen mejores resultados cuando el problema se aborda de forma integrada. Acojo con satisfacción la propuesta de la Comisión de rechazar las restricciones cualitativas indicativas que utilizan actualmente los agentes de aduanas para determinar la cantidad de productos de uso personal objeto de impuestos especiales que se puede importar, porque dicho procedimiento se contradice con los requisitos esenciales para el funcionamiento del mercado común. En efecto, ¿cómo podemos hablar de un mercado común en el que las personas no pueden importar productos para su uso personal?"
+        },
+        {
+          "id": "modern_corpus_spanish-247591-313",
+          "text": "Creo que esto ya está reflejado de forma adecuada en los considerandos. Respecto de la enmienda que pide que la Comisión revise y evalúe los «niveles indicativos», solo puedo decir que la Comisión los ha evaluado en su informe. Esta era la base de su propuesta y ha llegado a la conclusión de que ya no deberían aparecer en la legislación de la UE."
+        },
+        {
+          "id": "modern_corpus_spanish-27690-1178",
+          "text": "A eso se debe también el retraso en la ejecución de las acciones estructurales, cosa que no se puede ni se debe confundir en estos casos con la ausencia de proyectos, con la ausencia de necesidades y mucho menos con desaparición alguna de las profundas disparidades infraestructurales existentes. Una mejor aplicación de los Fondos estructurales será más consecuencia de una modificación de esas orientaciones macroeconómicas que de obstáculos inadmisibles que se pongan a la nueva presupuestación automática de las dotaciones o de obstáculos que se pretendan poner a la distribución indicativa de los medios financieros de los Fondos estructurales por los Estados miembros. Señor Presidente, una relación de cooperación solamente funciona si todos respetan los acuerdos."
+        },
+        {
+          "id": "modern_corpus_spanish-28075-717",
+          "text": "La protección de la persona contra los riesgos relacionados con los productos químicos en el lugar de trabajo es una cuestión vital de salud y seguridad, en vista del número de nuestros ciudadanos que trabajan cada día con productos químicos. Es natural que la Comisión determine hasta qué punto los gobiernos de la Unión Europea han instituido niveles indicativos de seguridad para la exposición a productos químicos en el lugar de trabajo. Tenemos que comprobar ahora si es preciso imponer niveles obligatorios de seguridad para cerciorarnos de que se cumplen las normas."
+        },
+        {
+          "id": "modern_corpus_spanish-323698-954",
+          "text": "Eso pone de relieve la cuestión de lo que constituye el equilibrio geográfico para la Oficina: conviene señalar que el ACNUDH, al tiempo que ha sido criticado por su desequilibrio geográfico, todavía no ha recibido ninguna indicación de lo que se considera un nivel adecuado de representación para cada región, aparte del sistema de límites conveniente establecido a petición de la Asamblea General. A falta de toda recomendación de este tipo, y a fin de fijar objetivos indicativos, la Oficina analizó los límites vigentes aprobados por la Asamblea y dedujo los niveles de representación por región que entrañarían, a fin de facilitar la comparación con las estadísticas presentadas en los informes de la DCI. Al examinar la composición de la Oficina partiendo de esa base se obtiene una imagen distinta de la que figura en los informes de la DCI, que presentan al ACNUDH como una oficina de las Naciones Unidas con un desequilibrio geográfico especialmente grave."
+        },
+        {
+          "id": "modern_corpus_spanish-324922-234",
+          "text": "Resumen Se pueden resumir de la manera que sigue los principales logros del PNUMA tras la adopción de la escala indicativa de contribuciones voluntarias : a) Un importante aumento de la base de donantes, habida cuenta de que 157 Estados miembros de las Naciones Unidas prometieron y pagaron contribuciones durante los últimos seis años."
+        },
+        {
+          "id": "modern_corpus_spanish-324937-1352",
+          "text": "En su séptimo período extraordinario de sesiones celebrado en Cartagena, Colombia, en 2002, el Consejo de Administración/Foro Ambiental Mundial a Nivel Ministerial del Programa de las Naciones Unidas para el Medio Ambiente (PNUMA) adoptó el Informe del Grupo intergubernamental de composición abierta de ministros o de sus representantes relativo a la gobernanza ambiental a nivel internacional, incluido en el anexo a esa decisión. En el párrafo 16 de su informe, el Grupo de Trabajo de composición abierta expresa que todos los Estados miembros de las Naciones Unidas deberían contribuir financieramente al PNUMA y con ese objetivo solicitó la aplicación de una escala indicativa de contribuciones voluntarias al Fondo para el Medio Ambiente. El Grupo de Trabajo de composición abierta propuso que se estableciera una escala indicativa de contribuciones voluntarias con el fin de de ampliar la base de las contribuciones al Fondo para el Medio Ambiente y aumentar la previsibilidad del financiamiento voluntario al Fondo."
+        },
+        {
+          "id": "modern_corpus_spanish-324938-798",
+          "text": "En el párrafo 16 de su informe, el Grupo de Trabajo de composición abierta expresa que todos los Estados miembros de las Naciones Unidas deberían contribuir financieramente al PNUMA y con ese objetivo solicitó la aplicación de una escala indicativa de contribuciones voluntarias al Fondo para el Medio Ambiente. El Grupo de Trabajo de composición abierta propuso que se estableciera una escala indicativa de contribuciones voluntarias con el fin de de ampliar la base de las contribuciones al Fondo para el Medio Ambiente y aumentar la previsibilidad del financiamiento voluntario al Fondo. La escala voluntaria fue específicamente establecida para el Fondo para el Medio Ambiente, teniendo en cuenta, entre otras cosas, la escala de cuotas de las Naciones Unidas, y lo establecido en el párrafo 17 del informe del Grupo de Trabajo, a saber:"
+        },
+        {
+          "id": "modern_corpus_spanish-324945-786",
+          "text": "e) Disposiciones para que cualquier Estado miembro que esté en situación de hacerlo, aumente su nivel de contribuciones con respecto del nivel actual. Tras haber adoptado el Consejo de Administración/Foro Ambiental Mundial a Nivel Ministerial el informe del Grupo de Trabajo, el Director Ejecutivo del PNUMA inició, al segundo año del bienio 2002-2003, una fase experimental de la escala indicativa de contribuciones voluntarias por un año. Tras la fase experimental, se aplicó la escala en el bienio 2004-2005 y luego fue revisada en los bienios 2006-2007 y 2008-2009."
+        },
+        {
+          "id": "modern_corpus_spanish-324960-796",
+          "text": "En el año 2003, tras la introducción de la escala indicativa de contribuciones voluntarias, 157 Estados Miembros aportaron sus contribuciones al Fondo para el Medio Ambiente, en comparación con los 110 Estados Miembros que aportaban sus contribuciones antes de la reunión de Cartagena. Ya en el año en que se celebró la reunión de Cartagena se pudieron apreciar las repercusiones de la escala indicativa de contribuciones voluntarias. A mediados de 2002 se informó a los gobiernos sobre la escala y ese año los donantes aumentaron en un 17 %."
+        },
+        {
+          "id": "modern_corpus_spanish-324971-506",
+          "text": "La respuesta fue que en el primer año del bienio 62 Estados Miembros aumentaron sus contribuciones y 39 Estados Miembros las aumentaron en el año 2007. Para el bienio 2008-2009, con el fin de aumentar el presupuesto, se volvió a aumentar la escala indicativa de contribuciones voluntarias y al inicio de diciembre de 2008, cincuenta y tres Estados Miembros ya habían aumentado sus contribuciones y se espera que otros lo hagan para fin de año y en la segunda mitad del bienio (Fig.2) Durante los cuatro bienios previos a la reunión de Cartagena, la tendencia de las contribuciones fue globalmente negativa."
+        },
+        {
+          "id": "modern_corpus_spanish-401361-1264",
+          "text": "Un factor decisivo para la ejecución y, de hecho, para el éxito de ese plan y de los objetivos establecidos en el plan estratégico indicativo es la disponibilidad de recursos. Si bien la Comunidad agradece el apoyo financiero, técnico y material prestado por los fondos y programas de las Naciones Unidas, así como por la comunidad internacional, en este proyecto de resolución se hace un llamamiento a favor de un apoyo sostenido y revigorizado de las Naciones Unidas y de sus organismos conexos, así como de la comunidad internacional, para el logro real de las metas y los objetivos que es establecen en el plan estratégico indicativo regional de desarrollo y en el plan estratégico indicativo. En el proyecto de resolución también se toma nota de la gravedad de la pandemia del VIH/SIDA respecto de la cual la región de la Comunidad es una de las más afectadas."
+        }
+      ]
+    }
+  ]
+}

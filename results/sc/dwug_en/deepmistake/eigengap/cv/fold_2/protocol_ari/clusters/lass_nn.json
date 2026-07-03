@@ -1,0 +1,831 @@
+{
+  "word": "lass_nn",
+  "n_clusters": 5,
+  "clusters": [
+    {
+      "id": 0,
+      "sentences": [
+        {
+          "id": "modern_fic_1974_10593.txt-3510-10",
+          "text": "I was trying to keep from being a wee dirty lass."
+        },
+        {
+          "id": "modern_fic_1980_10664.txt-5887-9",
+          "text": "Not now, \" said she, \" the Lass hath been thro ' enough Hardshipthese past Days. \""
+        },
+        {
+          "id": "old_fic_1823_7213.txt-551-14",
+          "text": "\" God bless you, my gude bairn -- you were aye a gude lass, a gude dauchter to me."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "sentences": [
+        {
+          "id": "modern_fic_1993_1040075.txt-3386-3",
+          "text": "Is this the lass I used to bounce on my knee?"
+        },
+        {
+          "id": "modern_fic_2003_29566.txt-57-25",
+          "text": "In another life, he would have laughed aloud at the absurdity of the thin-shouldered seneschal even mentioning such things as manly needs and bare-bottomed lasses."
+        },
+        {
+          "id": "modern_fic_2005_50424.txt-0-36",
+          "text": "@@12424 Rod Garcia introduced us to the fantasy world of Markovy back in the August 2000 issue, and in the past years he has spun out half a dozen tales of brave knights, invisible lasses, death-dealing goddesses, and unusual romances."
+        },
+        {
+          "id": "modern_mag_1980_431982.txt-155-14",
+          "text": "In three years she played about 40 parts, everything from the Salvation Army lass in the Brecht-Weill musical \" Happy End \" to a young lover in \" A Midsummer Night's Dream \" to a decayed ancient in \" The Idiots Karamazov, \" a madcap burlesque by two bright and brash young playwrights, Albert Innaurato and Christopher Durang."
+        },
+        {
+          "id": "modern_mag_1987_494263.txt-44-14",
+          "text": "Just before the Conroys leave, one guest sings a song called \" The Lass of Aughrim."
+        },
+        {
+          "id": "old_fic_1824_8753.txt-828-7",
+          "text": "Give me but a friend and a lass, boys, To drive dull care away."
+        },
+        {
+          "id": "old_fic_1845_7103.txt-24-29",
+          "text": "-- He was a regular lad-seaman in his appearance and dress, and a foul anchor imprinted with India ink into his wrist, and the initials of some lass ashore done upon his fair white neck, rendered visible by the gaping of his"
+        },
+        {
+          "id": "old_fic_1847_7149.txt-2014-29",
+          "text": "Sir Edward, \" answered the fellow, with a cunning grin, clearly perceiving the drift of his master's question, \" there was a very pretty lass upon his arm, wasn't there, sir? \""
+        },
+        {
+          "id": "old_mag_1835_565217.txt-61-8",
+          "text": "Perfection whispered, passing by, Behold the Lass of Ballochmyle. '"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sentences": [
+        {
+          "id": "modern_fic_1972_780109.txt-2279-2",
+          "text": "But, lass, a touch of essence here or there will make a strong, grand man from a shy, bashful sort. \""
+        },
+        {
+          "id": "modern_fic_1974_780164.txt-1015-9",
+          "text": "After a moment's silence he said, \" Lass, he can not be buried in consecrated ground."
+        },
+        {
+          "id": "modern_fic_1986_10746.txt-660-9",
+          "text": "We could make our fortunep120with one of these, lass -- if we could get it out of here."
+        },
+        {
+          "id": "modern_fic_1994_54062.txt-430-22",
+          "text": "When it was over, Ryan shook Guynemeyer's thin white hand, and returned the wipe to Wendy, saying \" Lass, I never claimed to be the best. \""
+        },
+        {
+          "id": "modern_fic_2001_14559.txt-594-15",
+          "text": "p. 34 SLIP We'll find something we can spare (To Hesp) Beautiful lass."
+        },
+        {
+          "id": "modern_fic_2005_31478.txt-87-12",
+          "text": "But that's the very thing we have going for us, lass."
+        },
+        {
+          "id": "modern_mag_2001_417106.txt-821-5",
+          "text": "And some Abbotts, my lass, get strokes of good fortune."
+        },
+        {
+          "id": "old_fic_1849_5295.txt-500-60",
+          "text": "At length Jew Mike himself was vociferously called on for either a song or a story; and not being a vocalist, the gentleman preferred entertaining his friends with the latter; so, clearing his throat by an enormous draught of brandy, he began as follows: JEW MIKE 'S STORY \" You see, lads and lasses, a year or two before I came to this accursed country to be jugged for a ten spot, for manslaughter, (it was a clear murder, though, and a good piece of work, too,) I was a nobleman's butler in the great city of London."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sentences": [
+        {
+          "id": "modern_fic_1962_16286.txt-2686-24",
+          "text": "Lolita is bobbing at a walking pace immediately behind the leader, a lanky ranger who keeps turning to her and kidding the cocky lass."
+        },
+        {
+          "id": "modern_fic_1965_780078.txt-2158-5",
+          "text": "But dalliance with a lovely lass Far surpasses these."
+        },
+        {
+          "id": "modern_fic_1971_10537.txt-9882-7",
+          "text": "While I was just an impressionable little lass I'd rise to the bait of any little flattery flung me way."
+        },
+        {
+          "id": "modern_fic_1971_10541.txt-2230-30",
+          "text": "Always a chance, my lad, in the darkness, while fireworks and colored fountains play for the Queen's pleasure, to slip away with some fine country lass and teach her the oldest of Court dances, to clothe her in green clover and show her a wondrous rocket of my own. \""
+        },
+        {
+          "id": "modern_fic_1972_10557.txt-2747-5",
+          "text": "\" You are a good lass to turn the thought so merrily but Iwould that you were true-born."
+        },
+        {
+          "id": "modern_fic_1973_10576.txt-2136-2",
+          "text": "\" Poor lass, \" he said, \" she has nothing else since our second died."
+        },
+        {
+          "id": "modern_fic_1974_10593.txt-3509-5",
+          "text": "What would a wee dirty lass like you have told a marriage coun-selor? '"
+        },
+        {
+          "id": "modern_fic_1974_780164.txt-1256-32",
+          "text": "If the young laird fired that pistol, \" Angus said, \" he meant not to hit you, but only to frighten, else you would be dead now, lass."
+        },
+        {
+          "id": "modern_fic_1974_780164.txt-1989-3",
+          "text": "was a wee lass only a few years out of the cradle then, but her brother Sir James was twenty-two and already the laird, and her brother Malcolm was almost twenty. \""
+        },
+        {
+          "id": "modern_fic_1974_780164.txt-3162-16",
+          "text": "and then hurrying out to the stables to see Angus, who still called me \" lass, \" and then to the kitchen to greet | Jenny, who now called me \" milady. \""
+        },
+        {
+          "id": "modern_fic_1974_780164.txt-382-3",
+          "text": "Tell me, lass, did ye find him bonnie? \""
+        },
+        {
+          "id": "modern_fic_1977_10628.txt-4037-4",
+          "text": "But the poor brave lass stays on, with Christ knows how many struggles, in hopes of preserving some representationfor Kindred, Followers, and loyal Travers."
+        },
+        {
+          "id": "modern_fic_1980_10663.txt-1172-33",
+          "text": "He considered himself one of the poor, but even the boy knew that this young man's parents had paid his education at the law -- whereas the rest, lad and lass alike, were in the mill or at the works or on the docks at twelve or fourteen."
+        },
+        {
+          "id": "modern_fic_1981_10675.txt-2101-6",
+          "text": "If you want to leave the lass here, though, I'll look after her myself, and... \" \" You misunderstand me, \" Fiona said in a harsh voice."
+        },
+        {
+          "id": "modern_fic_1985_10727.txt-2745-6",
+          "text": "\" Now you have it, lass, \" he agreed gruffly. \""
+        },
+        {
+          "id": "modern_fic_1985_10727.txt-2751-2",
+          "text": "Aye, lass, that they are, by your definition."
+        },
+        {
+          "id": "modern_fic_1986_10746.txt-1657-2",
+          "text": "Ah, lass, you should have gotten me up sooner."
+        },
+        {
+          "id": "modern_fic_1986_10746.txt-2263-27",
+          "text": "But how did you get out of Bortis's trap, or cross that killing circle up there, or -- \" \" Just a minute, lass"
+        },
+        {
+          "id": "modern_fic_1987_780087.txt-248-19",
+          "text": "Good thing for me they don't know exactly what I 'm suggesting might be done with those wee lasses"
+        },
+        {
+          "id": "modern_fic_1987_782033.txt-1026-16",
+          "text": "It was warm in the greenhouse, and his companion, Annie, a buxom country lass, had prevailed upon the good constable to bring a picnic hamper. \""
+        },
+        {
+          "id": "modern_fic_1989_13956.txt-513-4",
+          "text": "DICKON SHE 'S A LASS AND THA ART ' RIGHT, AS NEEDS A SPOT WHERE SHE CAN REST IN."
+        },
+        {
+          "id": "modern_fic_1993_1040075.txt-3226-4",
+          "text": "A plump, lively lass: Mirina was her name."
+        },
+        {
+          "id": "modern_fic_1994_53932.txt-676-20",
+          "text": "Fit as a pippin she be, an ' that's all to the good, fer what awaits the lass. \""
+        },
+        {
+          "id": "modern_fic_1995_39386.txt-190-9",
+          "text": "No one could believe that a slip of a lass like me could force a beachmaster of erudition such as yourself, a man with a history of violence, to do anything."
+        },
+        {
+          "id": "modern_fic_1997_28876.txt-24-17",
+          "text": "He tried to get up, weaved, and sat back down \" You're a sharp-tongued lass. \""
+        },
+        {
+          "id": "modern_fic_1999_30509.txt-368-9",
+          "text": "\" Didn't you know how to swim, lass? \""
+        },
+        {
+          "id": "modern_fic_1999_30509.txt-376-11",
+          "text": "He wondered if Gideon was experiencing a similar response to the lass, and just as soon as he could find the discipline to stop gawking at her, he'd look at his commander. \""
+        },
+        {
+          "id": "modern_fic_1999_30509.txt-381-5",
+          "text": "\" You were a bold lass, \" Gideon commented. \""
+        },
+        {
+          "id": "modern_fic_1999_44468.txt-104-7",
+          "text": "\" You are free with oaths, lass. \""
+        },
+        {
+          "id": "modern_fic_1999_44468.txt-90-4",
+          "text": "\" I am a lass, \" said young Stewart. \""
+        },
+        {
+          "id": "modern_fic_1999_44468.txt-98-8",
+          "text": "Duncan turned his eyes away, but the lass seized his hands and pressed them to her lips."
+        },
+        {
+          "id": "modern_fic_1999_45249.txt-99-2",
+          "text": "That young lass will make an excellent housewife one day! \""
+        },
+        {
+          "id": "modern_fic_2000_32016.txt-389-3",
+          "text": "The young Indian lass meanwhile loves him openly, freely, with a love as pure and as wholesomely naive as this land of her birth is free of the evils of the civilized world from which he's come, as evidenced by his telltale pallor and embarrassing ignorance of wigwam etiquette."
+        },
+        {
+          "id": "modern_fic_2000_38940.txt-758-38",
+          "text": "It was a song kin and child of many songs: A mother's voice rejoicing over a blessed cradle; a husbandman's rough cheer over a day's work done and well done; a virgin lass weaving dreams of love into the melody that springs unbidden to her lips"
+        },
+        {
+          "id": "modern_fic_2001_28777.txt-76-20",
+          "text": "was a disaster at Nancy, and the richest prince in the West is a corpse, with an unmarried lass as his heiress."
+        },
+        {
+          "id": "modern_fic_2002_28914.txt-4-24",
+          "text": "The woman, who had helped bring over three score wee bairns into the world, had instantly proclaimed Braden a bane to any lass foolish enough to give her heart over to one such as he."
+        },
+        {
+          "id": "modern_fic_2002_31369.txt-22-12",
+          "text": "She looked more like a beardless lad in a kirtle than a lass overripe for marriage."
+        },
+        {
+          "id": "modern_fic_2004_29590.txt-142-2",
+          "text": "Not any lass his stoop-shouldered da cared to parade before him."
+        },
+        {
+          "id": "modern_fic_2004_29590.txt-147-20",
+          "text": "I wouldn't have minded going home to have my da tell me he'd procured a fine and comely lass to be my bride. \""
+        },
+        {
+          "id": "modern_fic_2004_29590.txt-16-19",
+          "text": "He'd won every archery competition, each trial of strength, and turned the heads of all the lasses with his easy charm and fine, quick wit."
+        },
+        {
+          "id": "modern_fic_2004_30097.txt-143-3",
+          "text": "Even as a lass she'd never let folk get the better of her."
+        },
+        {
+          "id": "modern_fic_2004_32368.txt-134-15",
+          "text": "He recalled more than one occasion when the two of them had taken one lusty lass into the bed furs betwixt them."
+        },
+        {
+          "id": "modern_fic_2004_32497.txt-94-6",
+          "text": "And Ill have you know, lass, on a good night I can still give you the shagging of your life. \""
+        },
+        {
+          "id": "modern_fic_2005_32787.txt-347-9",
+          "text": "If ever there was one who could turn a lass's head, he was one. \""
+        },
+        {
+          "id": "modern_fic_2005_32787.txt-402-4",
+          "text": "Shame on ye, lass, \" Rue muttered, but when her gaze met Megan's, there was"
+        },
+        {
+          "id": "modern_fic_2006_26882.txt-27-9",
+          "text": "\" I would far rather she remain a common lass than be raised to the nobility and be miserable all her life! \""
+        },
+        {
+          "id": "modern_fic_2006_26899.txt-32-22",
+          "text": "Then I must surely be absent more oft, \" he said, \" if I be missed by such a bonny lass as yerself. \""
+        },
+        {
+          "id": "modern_fic_2006_26899.txt-99-7",
+          "text": "I fear I dunna drink tea, lass. \""
+        },
+        {
+          "id": "modern_fic_2006_27510.txt-18-4",
+          "text": "Just a simple fisher lass heading home, nothing more."
+        },
+        {
+          "id": "modern_fic_2006_29620.txt-90-43",
+          "text": "When he noted the day's sunshine, his strictures had ended, but no sooner did he clap eyes on Sorcha and Sidony than he sighed and said, \" I hope ye mean to be a good wife to Ardelve, lass. \""
+        },
+        {
+          "id": "modern_fic_2007_34090.txt-14-2",
+          "text": "Fiona, lass, \" Father MacCanney said in an exasperated voice, \" he's not fit to be a groom! \""
+        },
+        {
+          "id": "modern_fic_2007_34090.txt-89-5",
+          "text": "Ye are the most stubborn lass I ever met. \""
+        },
+        {
+          "id": "modern_fic_2008_36218.txt-33-18",
+          "text": "And a dandy, and a Scots gent, no less, will be most welcome by the lasses."
+        },
+        {
+          "id": "modern_fic_2009_36692.txt-135-11",
+          "text": "How did you -- \" \" I 'm no fool, lass."
+        },
+        {
+          "id": "modern_fic_2009_36846.txt-47-6",
+          "text": "I'll no allow any other lass to be forced to face marriage to"
+        },
+        {
+          "id": "modern_mag_1961_268246.txt-9-15",
+          "text": "Just now it is nightfall, and a pretty, innocently mischievous girl (Barbara Lass) has arrived at the city's School of Geodetics, ready to enroll."
+        },
+        {
+          "id": "modern_mag_1964_208036.txt-1-10",
+          "text": "At least such is the case of a tall Welsh lass named Gwyneth Jones."
+        },
+        {
+          "id": "modern_mag_1988_487706.txt-108-9",
+          "text": "of D'Ampton Manor feels free to daily with the lasses on Mercy Farm and to tease the Scots commoner visiting his fief."
+        },
+        {
+          "id": "modern_mag_2001_417106.txt-800-8",
+          "text": "It's grand to see you, my lass, grand. \""
+        },
+        {
+          "id": "modern_news_1974_731687.txt-9-3",
+          "text": "There, a lass in Tahitian garb was to purchase the first double ticket with chances at"
+        },
+        {
+          "id": "modern_news_1985_668689.txt-13-13",
+          "text": "SHEENA EASTON, Do You (EMI): Once a demure Scottish lass, Sheena Easton made her commercial mark last year singing about her privates."
+        },
+        {
+          "id": "modern_news_1985_669432.txt-5-23",
+          "text": "' If Mr. (Samuel) Clemens (Mark Twain) can not think of something better to tell our pure-minded lads and lasses, he ' d best stop writing for them, ' ' wrote Alcott."
+        },
+        {
+          "id": "modern_nf_1984_774242.txt-1326-11",
+          "text": "The society along the river is class-conscious, but the: lasses can not help knowing each other and entering into each other's lives."
+        },
+        {
+          "id": "old_fic_1814_8564.txt-739-3",
+          "text": "What a comely lass thou hast gotten for me here!"
+        },
+        {
+          "id": "old_fic_1815_8613.txt-100-9",
+          "text": "So So, rural damsels; what my pretty lasses, do you attack in ambuscade?"
+        },
+        {
+          "id": "old_fic_1815_8717.txt-3597-2",
+          "text": "the sweet lasses say, \" There's Doolittle the dandy. \""
+        },
+        {
+          "id": "old_fic_1815_8719.txt-718-15",
+          "text": "Dorriville Well, well, don't despair, Robert, you shall lead your lass to the altar yet."
+        },
+        {
+          "id": "old_fic_1818_7631.txt-309-6",
+          "text": "You may present the furious little lass With her own image in a looking glass -- Tell her the passion which her peace annoys, Disturbs her person, and her mind destroys, Can only serve to make her tortur'd breast An emblem of a raging hornet's nest; Her friends will"
+        },
+        {
+          "id": "old_fic_1821_8985.txt-571-18",
+          "text": "I believe I 'm not quite as neat in my person, and habiliments, as a country lass should be."
+        },
+        {
+          "id": "old_fic_1823_7213.txt-1732-5",
+          "text": "the lads an ' the lasses, an ' the sports o ' a simmer evening, an ' the jokes an ' mirth o ' a lang winter's nicht -- ah!"
+        },
+        {
+          "id": "old_fic_1823_7213.txt-3644-16",
+          "text": "But tell me now, how is your sweetheart, the pretty, plump, black-eyed lass of the woods here, that you used to toast at your oyster suppers in Philadelphia? \""
+        },
+        {
+          "id": "old_fic_1823_8520.txt-1516-23",
+          "text": "Quit your flocks and your herds for a while; Hither quickly repair, In our mirth a part share, And each lass her love meet with a smile."
+        },
+        {
+          "id": "old_fic_1823_9628.txt-498-19",
+          "text": "Finale, to Act I Air -- Harriet Sweet the hour, when freed from labour, Lads and lasses thus convene, To the merry pipe and tabor, Dancing gayly on the green."
+        },
+        {
+          "id": "old_fic_1824_7211.txt-1161-4",
+          "text": "Hoot, Peggy, lass, \" said he, in an endearing tone, \" dinna be sae flirted."
+        },
+        {
+          "id": "old_fic_1824_7211.txt-1178-21",
+          "text": "me my ain Peggy, an ' I care na ' wha gets a ' the lave o ' the bonny lasses in the country."
+        },
+        {
+          "id": "old_fic_1824_7211.txt-189-15",
+          "text": "\" Aye, aye, \" said the wife, \" Peggy is a tidy lass, an '"
+        },
+        {
+          "id": "old_fic_1824_7211.txt-2276-17",
+          "text": "The morning rose that ushered in the potato digging-day, in which numerous throngs of lads and lasses dressed in their best attire, with light and merry hearts came from all parts of the adjacent country, into the town of Larne; the lads to march to the work of charity and benevolence, the lasses to witness the procession, and reward their lovers as they passed them with their smiles."
+        },
+        {
+          "id": "old_fic_1824_7211.txt-2316-18",
+          "text": "I 'm tauld that Jenny Davis is amaist wud aboot you; an ' she's a nice lass; an ' her father can gie her twa hunner pun ' ony day."
+        },
+        {
+          "id": "old_fic_1824_7211.txt-745-21",
+          "text": "But I hope his honour an ' you will oblige me, by comin ' wi ' Peggy and these ither lasses, to tak share o ' half a pint, an mak ' up the matter. \""
+        },
+        {
+          "id": "old_fic_1824_7211.txt-752-15",
+          "text": "Besides, ye maun grant that it was na very creditable for a poor bonny lass, like her, to be ta'en notice to by a rich lookin ' gentleman sa far abune her, in the market."
+        },
+        {
+          "id": "old_fic_1829_7072.txt-2468-38",
+          "text": "He was transferred at once from the formal routine and rigid rules of a college life, where no flirting with the ladies was permitted to be thought of, except the ethereal flirtation of wooing those shy lasses, the sweet and sacred Nine, ' and where nothing in this round world was considered so important, as to have the first appointment in the class, or be able to write the best ode to Hope, or sonnet to Despair, ' and introduced into the society of elegant and, as he thought, the most enchanting people on earth, and to the bustle and business of a large city."
+        },
+        {
+          "id": "old_fic_1829_7072.txt-2505-39",
+          "text": "from her father; but the symmetry, so gracefully elegant, the rounded arm, taper fingers and slender foot, were not quite so strictly Vermontese; though these perfections are much oftener possessed by your rural lasses, than the city belle, or the more fastidious city beau, who is usually a perfect Chinese in his admiration of small feet, imagines possible."
+        },
+        {
+          "id": "old_fic_1832_7177.txt-3501-37",
+          "text": "Thence, he came back, by another route, to Florence, to Mantua, to Padua, and to Venice; visiting gay cities; consorting with cavaliers and choice spirits; romping with rustic lasses; outfacing bluff bandits; and tuning himself up to the key of that wayward, disorderly time, in the best humour of a bon-camarado who wore silken doublet and trusty Toledo."
+        },
+        {
+          "id": "old_fic_1833_7058.txt-1562-15",
+          "text": "But your stage Rosalind is generally the reverse of Amiens -- an arch, vivacious lass, who imparts due effect to the mixture of natural images and domestic ideas suggested by the saucy words of the song."
+        },
+        {
+          "id": "old_fic_1833_7059.txt-1517-33",
+          "text": "Easter and Whitsuntide are now little more than names; and that most delightful of ruralities, dancing round the maypole, and choosing the \" queen of May \" from the prettiest lass of the village, has become nearly obsolete."
+        },
+        {
+          "id": "old_fic_1834_7032.txt-2020-45",
+          "text": "The large branching silver candlesticks, which stood at each side of a full-length picture of General Washington, on the mantel-piece, were richly fringed with white bridal ornaments, after the good old fashion; and as lively a set of lads and lasses as ever moved through the figures of a cotillion, were keeping time to the impetuous thumping of their own hearts, and the long-sweeping bow-hands of two hereditary fiddlers stationed behind the door."
+        },
+        {
+          "id": "old_fic_1835_7063.txt-1748-31",
+          "text": "A coof cam in wi ' rowth o ' gear, And I hae tint my dearest dear; But woman is but warld's gear, Sae let the bonnie lass gang. \""
+        },
+        {
+          "id": "old_fic_1835_7272.txt-1843-27",
+          "text": "As he approached Broadway, however, the sounds of life and busy movement reached his ear, and he saw half a dozen young lads and lasses issue from a house on his left, dressed in their Sunday gear"
+        },
+        {
+          "id": "old_fic_1835_7272.txt-1859-68",
+          "text": "It seemed to have struck a sympathetic chord in the countryman; for drawing near the good woman, whose exterior expressed very little resemblance to the gentle emblem by which she had chosen to personify herself, he said, kindly smiling, \" Bring me a knife, mother, and I'll give you a slice of butter to garnish your tea-table when your comely lasses come home. \""
+        },
+        {
+          "id": "old_fic_1835_7334.txt-1114-91",
+          "text": "Our hero, feeling somewhat mortified in finding that his own sweet notes should be mistaken by his drowsy inamorata for the music of some nocturnal band of feline performers, and perceiving by her snoring that she was again relapsing into slumber, resolved to regale her ears with a livelier strain, though with a text no less beautiful and appropriate: -- \" Then round the circle let the glass, Yet in the square, convivial pass; And when the sun winds o'er the lea Each lass shall have her jubilee. \""
+        },
+        {
+          "id": "old_fic_1835_7334.txt-1483-49",
+          "text": "In a few minutes more another made a kind of circuit round the room, and passing near him, dropped a small piece of paper into his hand, and scarcely had he put away the first before another billet was dropped at his feet as a gay lass brushed by him, saying she was going to peep out the door to see if papa was coming."
+        },
+        {
+          "id": "old_fic_1837_7395.txt-1589-33",
+          "text": "Especially was he beloved by the pretty girls along the Connecticut, whose favor he used to court by presents of the best smoking-tobacco in his stock; knowing well that the country lasses of New England are generally great performers"
+        },
+        {
+          "id": "old_fic_1837_7395.txt-2970-13",
+          "text": "Both are young, both are pretty; but methinks the left hand lass is"
+        },
+        {
+          "id": "old_fic_1837_7395.txt-3207-35",
+          "text": "But I knew the position of the old minister's arm-chair, and also where his wife sat, with her knitting-work, and how to avoid his two daughters, one a stout country lass, and the other a consumptive girl."
+        },
+        {
+          "id": "old_fic_1838_7085.txt-2447-18",
+          "text": "if you don't give ear, he will wind you long stories -- than of the prettiest lass for whom youthful knight ever put lance in rest."
+        },
+        {
+          "id": "old_fic_1838_7086.txt-2825-11",
+          "text": "but you are a father, with a tight, pretty lass of your own; what cares an old widower for bright een and sunny hair?"
+        },
+        {
+          "id": "old_fic_1840_7164.txt-1181-13",
+          "text": "Yet I must have an eye to the puritanical curmudgeon that this simple lass has the courtesy to call father. \""
+        },
+        {
+          "id": "old_fic_1843_7116.txt-477-15",
+          "text": "He was a handsome chap too, and had a keen eye for a pretty lass, or I am mistaken."
+        },
+        {
+          "id": "old_fic_1843_7155.txt-1237-67",
+          "text": "as he entered; and as the negro sentinel thrust in his turbaned head, at the half-opened door -- \" jump up on deck, and clear away my pinnace; bring it round to the starboard gangway, and after we shall have left the ship -- I and the gentlemen -- do thou and Charon lead down the lady there, and the black lass, and row them straight to the sallyport, entering the covered way: I will be there to meet ye; and hark, sirrah, in your ear -- do thou, or thy swart"
+        },
+        {
+          "id": "old_fic_1843_7325.txt-795-1",
+          "text": "merry lass, who broke the crockery, burned the dinner, tore the clothes in ironing, and knocked down everything that stood in her way about the house, without at all discomposing herself about the matter."
+        },
+        {
+          "id": "old_fic_1843_8764.txt-2502-60",
+          "text": "Hypolito All gentle quarrels in the pastoral poets, All passionate love scenes in the best romances, All chaste embraces on the public stage, All soft adventures, which the liberal stars Have winked at, as the natural course of things, Have been surpassed here by my friend, the student, And this sweet Gipsy lass, fair Preciosa!"
+        },
+        {
+          "id": "old_fic_1844_7081.txt-1867-11",
+          "text": "Well, then, I believe that I did see the lass, mon!"
+        },
+        {
+          "id": "old_fic_1844_7081.txt-543-12",
+          "text": "intelligence offices, of which, in common with all other country lasses living in the neighborhood of the city, she had heard much; and like them, thought she had only to go there to get employment at once."
+        },
+        {
+          "id": "old_fic_1844_7114.txt-736-14",
+          "text": "' Ah, Ben, I see you have an understanding eye to the lasses."
+        },
+        {
+          "id": "old_fic_1846_4464.txt-1316-28",
+          "text": "from the country, and to stare at the uncouth and sturdy forms of the farmers, or admire the black eyes and merry faces of the country lasses."
+        },
+        {
+          "id": "old_fic_1846_544.txt-2641-14",
+          "text": "Whilst he was doing this, I caught sight of a knot of young lasses, who were sitting near us on the grass surrounded by heaps of flowers which they were forming into garlands."
+        },
+        {
+          "id": "old_fic_1846_544.txt-333-4",
+          "text": "But courage, old lass, I hope to see thee soon within a biscuit's toss of the merry land, riding snugly at anchor in some green cove, and sheltered from the boisterous winds."
+        },
+        {
+          "id": "old_fic_1846_8819.txt-1886-16",
+          "text": "King Charles II Spoken like an oracle; and did not you say that this pretty lass was his niece?"
+        },
+        {
+          "id": "old_fic_1847_7149.txt-48-54",
+          "text": "You would have thought a seclusion so entire, from all society of their equals, must have prevented their acquiring those usual accomplishments, those necessary arts, which every English gentlewoman is presumed to possess, as things of course -- that they must have grown up mere ignorant, unpolished country lasses, without taste or aspiration beyond the small routine of their dull daily duties -- that long confinement must have broken the higher and more spiritual parts of their fine natural minds -- that they must have become mere moping household drudges; and so to think would be so very natural, that it is by no means easy to conceive how it was brought to pass, that the very opposite of"
+        },
+        {
+          "id": "old_fic_1847_8919.txt-686-4",
+          "text": "Come, lads and lasses, sing, dance and be merry."
+        },
+        {
+          "id": "old_fic_1848_7107.txt-864-13",
+          "text": "At the toll-gate the keeper could only tell me that a very pretty lass, as he called her, had told him in great alarm that an officer was defending himself against two men whom he had found annoying her, and begged him to send to his aid."
+        },
+        {
+          "id": "old_fic_1848_7193.txt-13264-28",
+          "text": "And the Man with the motionless form and corpse-like visage, uttered a burst of hollow laughter as he replied: \" Gilbert had spoken of the pretty lass named Madeline."
+        },
+        {
+          "id": "old_fic_1849_5168.txt-2217-20",
+          "text": "Well, old gal -- here's to the wind that blows, the ship that goes, and the lass that loves a sailor! '"
+        },
+        {
+          "id": "old_fic_1849_5168.txt-4805-6",
+          "text": "' You're a gay old lass, ' said the Dead Man, without availing himself of the old lady's kind permission -- ' you have been a ' high one ' in your time, but your day is nearly over. '"
+        },
+        {
+          "id": "old_fic_1849_5295.txt-473-8",
+          "text": "These, with a small sprinkling of ebony lasses and their attendant cavaliers, make up"
+        },
+        {
+          "id": "old_fic_1849_583.txt-2574-50",
+          "text": "He wears a broad-brimmed, low-crowned hat; a huge roll of colored handkerchief about his neck, knowingly knotted and tucked in at the bosom; and has in summer-time a large bouquet of flowers in his buttonhole, the present, most probably, of some enamored country lass."
+        },
+        {
+          "id": "old_fic_1849_583.txt-4636-79",
+          "text": "at the castle of the Heer Van Tassel, which he found thronged with the pride and flower of the adjacent country -- old farmers, a spare leathern-faced race, in homespun coats and breeches, blue stockings, huge shoes, and magnificent pewter buckles; their brisk withered little dames, in close crimped caps, long-waisted shortgowns, homespun petticoats, with scissors and pincushions and gay calico pockets hanging on the outside; buxom lasses, almost as antiquated as their mothers, excepting where a straw hat, a fine ribbon, or perhaps a white frock, gave symptoms of city innovation; the sons, in short square-skirted coats with rows of stupendous brass buttons, and their hair generally queued in the fashion of the times, especially if they could procure an eel-skin for the purpose, it being esteemed throughout the country as a potent nourisher and strengthener of the hair."
+        },
+        {
+          "id": "old_fic_1849_7230.txt-2481-6",
+          "text": "Though differing widely from the buxom lasses of England, their prototypes upon this occasion, yet there was something far from disagreeable in these lithe and graceful creatures, with their bright, savage eyes, supple limbs, and elastic movements."
+        },
+        {
+          "id": "old_fic_1849_7333.txt-1254-39",
+          "text": "(I am ashamed to write it, for I have not pronounced one for a long time,) at the Captain for breaking his word with me and leaving before the hour, one of these Scotch lasses said to me imploringly, for our boat had gotten immediately under the stern of the steamer, where she stood, \" Oh!"
+        },
+        {
+          "id": "old_fic_1849_7333.txt-432-11",
+          "text": "So here's to the lad who can talk to his lass, And here's"
+        },
+        {
+          "id": "old_fic_1853_9158.txt-109-11",
+          "text": "These were again followed by two serving-women, fair, buxom-looking lasses, with the dark eyes and rich complexions of the sunny south; and an old steward, or major-domo, riding unarmed beside them."
+        },
+        {
+          "id": "old_fic_1854_3384.txt-4392-16",
+          "text": "\" And what so useful as to make my Annie look gayest of all the village lasses? \""
+        },
+        {
+          "id": "old_fic_1854_7839.txt-1700-3",
+          "text": "Surely, old lass, you ' re safe from Time's aggression, His ancient teeth on you can't make impression."
+        },
+        {
+          "id": "old_fic_1854_8328.txt-5343-12",
+          "text": "from The poetical works (1854) Mine be a pretty country lass, With soft transparency of cheek, Through which, like red wine in a glass, The blushes eloquently speak Of charms that will outlive the rose"
+        },
+        {
+          "id": "old_fic_1854_9826.txt-1896-19",
+          "text": "\" I ' m afraid our acquaintance is going to be broke off for a little while, my lass, \" replied the captain. \""
+        },
+        {
+          "id": "old_fic_1857_2618.txt-4212-39",
+          "text": "\" I suppose I am foolish, \" replied the dame, wiping a tear away, \" but I feared, lest the girl might derive some encouragement from it, though otherwise, Prudence is a good lass, and obedient, and I have no other fault to find with her; but I recollect now, when I was a girl, how"
+        },
+        {
+          "id": "old_fic_1859_9220.txt-669-14",
+          "text": "where Bessie and he talked it all over afresh, before the gaping Irish lasses and sneering mulattos, till they were found to agree in every particular about the \" nasty Yankees, \" and their ignorance of what's what, and their uppishness. \""
+        },
+        {
+          "id": "old_fic_1860_8725.txt-8-2",
+          "text": "Lads, Lasses, Police, &c.,; &c; Costume BRIAN O'LINN."
+        },
+        {
+          "id": "old_fic_1860_9791.txt-1180-27",
+          "text": "\" Then, if content to have your retirement broken in upon, all your household upset, and your immutable decrees turned topsy-turvy by a romping lass and an angelic gentleman, what did you seek it for? \""
+        },
+        {
+          "id": "old_fic_1860_9791.txt-1410-4",
+          "text": "She was a proud lass, but they bowed even her spirit, and at last she yielded."
+        },
+        {
+          "id": "old_mag_1832_564115.txt-87-35",
+          "text": "The daughters of the Clergyman, the Doctor, and the Merchant, (to give every man his title,) are not so graceful, so pretty, or so polite as the lasses of the farm."
+        },
+        {
+          "id": "old_mag_1833_554219.txt-312-26",
+          "text": "So he forbore to come at her again; and when he was asked the reason why, he said \" that Mercy was a pretty lass, but troubled with ill conditions. \""
+        },
+        {
+          "id": "old_mag_1834_564618.txt-134-9",
+          "text": "said they did; then says I, the lasses are the more fools to let them."
+        },
+        {
+          "id": "old_mag_1859_506372.txt-189-19",
+          "text": "But the girl of Tower Hill, who hung on Jack's neck before he departed; and the lass at Quimper, who gave the Frenchman his brdle-gueule and tobaccobox before he departed on"
+        },
+        {
+          "id": "old_nf_1824_747448.txt-1941-90",
+          "text": "The lyrical ballads, jaco \" binical and puling with affectation of simplicity as they \" were, had undoubtedly a certain merit *: and Wordsworth, \" though occasionally a writer for the nursery-masters and \" misses, ' Who took theii ' little porringer, And ate their porridge there, ' \" now and then expressed ideas worth miitating; but, like \" brother Southey, he had his price; and since he is turned \" tax-gatherer, is only fit to rhyme about lasses and wag ' ' goners."
+        },
+        {
+          "id": "old_nf_1832_758144.txt-421-17",
+          "text": "A kind friend, however, exerted herself so effectually for me, that a tall stately lass soon presented herself, saying, \" I be come to help you. \""
+        },
+        {
+          "id": "old_nf_1852_752548.txt-2830-27",
+          "text": "He's from Lancashire, in England, and came to this country some twenty years ago, with his wife, who was a pretty young lass in those days, and slim enough then, though she's so awful fleshy now."
+        },
+        {
+          "id": "old_nf_1854_755030.txt-3112-24",
+          "text": "Meanwhile William and I were already on foot, and our mules were led on by the guide's daughter, a pretty little lass of ten or twelve, who accompanied us in the capacity of mule driver."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sentences": [
+        {
+          "id": "modern_fic_1981_10674.txt-5687-12",
+          "text": "Hastily he put 50,000 on a quinella of Pilot Fish and Butterscotch Lass and fled back to the members ' room, gratefully to sip his brandy and soda."
+        },
+        {
+          "id": "modern_fic_1995_39439.txt-273-15",
+          "text": ", hand-sized rock into his truck's rear window, taking out the remaining safety lass and the bullet hole in one dean swipe."
+        },
+        {
+          "id": "modern_fic_1998_43328.txt-510-23",
+          "text": "All Bell said was, \" We'll start with sliver-leaf salad, carrot and cashew soup, and a pitcher of apricot lassi. \""
+        },
+        {
+          "id": "modern_fic_1998_43328.txt-535-10",
+          "text": "The waiter popped back up with their pitcher of apricot lassi."
+        },
+        {
+          "id": "modern_fic_1998_43328.txt-581-6",
+          "text": "She took a swig of the lassi, finding it cool and tingly, feeling instantly better."
+        },
+        {
+          "id": "modern_fic_1998_43328.txt-596-9",
+          "text": "So confident she suspected there was something in the lassi."
+        },
+        {
+          "id": "modern_fic_2004_13808.txt-742-11",
+          "text": "house, a bag of tea, and one precious quadroon lass."
+        },
+        {
+          "id": "modern_mag_1966_488145.txt-89-11",
+          "text": "s h o must seek election in November Under Califoi nia lass, a justice's name appears on the ballot with the question as to whether or not he shalt be retained in office He has no opponent, but if the vote is negative, the gosernor appoints a successor."
+        },
+        {
+          "id": "modern_mag_1967_274916.txt-5-15",
+          "text": "A suburban husband (Walter Matthau) decides that the grass is greener and the lass keener in the other fellow's backyard."
+        },
+        {
+          "id": "modern_mag_1967_492341.txt-284-23",
+          "text": "head of the New York Legal Aid office in the criminal courts, who has been defending indigents since he left Fordham University lass School in 1937. remembei s ease where a defendant misted nn SI anding trial (lest overwhelm ing case against him."
+        },
+        {
+          "id": "modern_mag_1971_479219.txt-250-0",
+          "text": "Lasses started out as a jockey in Darlington, South Carolina in 1915, getting \" five for ridin ', five for winnin '. \""
+        },
+        {
+          "id": "modern_mag_1982_325004.txt-19-4",
+          "text": "For many a dashing lass in that pioneering wave, the A-line mini was a kind of manifesto at the feminist barricades."
+        },
+        {
+          "id": "modern_mag_1995_415117.txt-3-23",
+          "text": "The museum's two membership groups -- the Pacific Northwest Arts Council and the Contemporary Art Council -- had worked together with Pilchuck lass School executive director Marge Levy to organize the event, taking advantage of the presence in Seattle of the prestigious audience expected for Pilchuck's 25th-anniversary picnic the prior afternoon, as well as the distinguished artists, critics and art historians who occupied the stage."
+        },
+        {
+          "id": "modern_mag_2001_426201.txt-48-2",
+          "text": "laurie lantar lassi surinen yeni unotime ve ramar aldaron!"
+        },
+        {
+          "id": "modern_news_1966_725564.txt-42-13",
+          "text": "It has been ' estimated that about 3.8 Million these workers now earn lass"
+        },
+        {
+          "id": "modern_news_1972_730482.txt-1-7",
+          "text": "U S Steel establishes an \" energy lass force \" to make recommendations on the most effective long-range power and fuel requirements of the company."
+        },
+        {
+          "id": "modern_news_1976_732547.txt-14-10",
+          "text": "the Editor: In a recent Op-Ed article, Abraham Lass, a retired high-school principal, recalled with fondness the school system he knew, a system that he says \" rewarded me and my colleagues for what we knew,."
+        },
+        {
+          "id": "modern_news_2001_661933.txt-35-0",
+          "text": "Lass was a tough-love disciplinarian during his tenure at the high school from 1955 to 1971, but devoted long hours to counseling and preparing students for college."
+        },
+        {
+          "id": "modern_news_2001_661933.txt-36-0",
+          "text": "Lass retired in 1971 after 16 years as the school's principal."
+        },
+        {
+          "id": "modern_news_2006_623988.txt-62-17",
+          "text": "The five choices (all $8) include one infused with lychee, another mixed with mango lassi and still another served up with a lemon wedge."
+        },
+        {
+          "id": "modern_nf_1974_773785.txt-272-22",
+          "text": "and that all contexts are unique; that differences of tone, dialect and so on inevitably cause differences of meaning (lass would occur in a different dialect situation, etc.)"
+        },
+        {
+          "id": "modern_nf_1998_773548.txt-664-1",
+          "text": "a lass or group of pupils and their teacher function as a \" community of enquiry \" (Prentice, 1991)"
+        },
+        {
+          "id": "modern_nf_1999_773549.txt-625-21",
+          "text": "Particular portions of the film, such as dissecting frogs in biology class, mock marriages in a sex education e lass, a beer party, and the election of homecoming queen, produced raucous laughter."
+        },
+        {
+          "id": "old_fic_1815_8717.txt-1117-15",
+          "text": "says they, \" We want nun of your Yankey rue, or pork and lasses; but we will have that likely British boy \" -- (meaning me) \" whose name is not on your shipping-paper, and who has no legal pertection. \""
+        },
+        {
+          "id": "old_fic_1818_8860.txt-1186-12",
+          "text": "We sailors love old England, Our king -- our grog and lass -- And for this precious Island, Won'd fight the world en maise."
+        },
+        {
+          "id": "old_fic_1818_8861.txt-495-8",
+          "text": "Why like any stout lad that loves a lass and liberty, I'll clear her out and myself too, some way or other; so"
+        },
+        {
+          "id": "old_fic_1823_7213.txt-1671-48",
+          "text": "Here Gilbert, pleased with this generosity of Nancy, as if his heart misgave him for having said any thing to hurt her feelings, arose and, catching both her and Maria by the hand, said -- \" Ye are baith my bairns -- gude lasses to yere father, an ' I hae na ' fan't to find wi"
+        },
+        {
+          "id": "old_fic_1824_7211.txt-1090-18",
+          "text": "\" Naething, Tam, \" replied the other, \" but I had to tak ' some lasses hame frae the market, and I thought I would come back an ' see some mair o ' the fun, an ' gin you ha ' naething better to do, we'll ha ' a naggin together. \""
+        },
+        {
+          "id": "old_fic_1824_8753.txt-829-11",
+          "text": "Yes, to drive dull care away, nothing like a lass and a glass -- nothing like it."
+        },
+        {
+          "id": "old_fic_1832_8862.txt-1103-4",
+          "text": "I espied two buxom lasses just now, Jack; they would greatly add to the repast."
+        },
+        {
+          "id": "old_fic_1838_7085.txt-574-8",
+          "text": "Keep thy hood close, and let the lasses alone, and it may save thy neck."
+        },
+        {
+          "id": "old_fic_1843_7208.txt-10532-32",
+          "text": "But when, as he got accustomed to the place, he accosted them with a gentle voice, said a complimentary word for their sign-board, with its full-length sailor's lass -- Hope upon her anchor, or sturdy Strength, standing square upon his pins -- they began at once to have a fancy for the old man."
+        },
+        {
+          "id": "old_fic_1847_7149.txt-2762-9",
+          "text": "replied Harbottle, \" every lad to his own lass."
+        },
+        {
+          "id": "old_fic_1847_9120.txt-24-3",
+          "text": "\" A Scotch lass ushers you into the second story front chamber, which is the spacious workship of the world maker. \""
+        },
+        {
+          "id": "old_fic_1849_583.txt-4641-7",
+          "text": "Not those of the bevy of buxom lasses with their luxurious display of red and white, but the ample charms of a genuine Dutch country tea-table in the sumptuous time of autumn."
+        },
+        {
+          "id": "old_fic_1850_7171.txt-3943-10",
+          "text": "That is the woman with the blue tire and the lasses cake! \""
+        },
+        {
+          "id": "old_fic_1853_3465.txt-2755-5",
+          "text": "Despatch -- dreadful collision and lass o ' life -- Times, Despatch, and Herald \" -- and drunken men whom you meet at every few blocks, and people going everywhere but into the church doors."
+        },
+        {
+          "id": "old_fic_1854_2820.txt-5129-20",
+          "text": "Then she would call out, \" Get along you, Jack, pokin ' your fingers into the ' lasses cup; make yourself scarce in this kitchen, or I'll crack your head mighty nigh as hard as the new Miss will. \""
+        },
+        {
+          "id": "old_fic_1857_8225.txt-230-6",
+          "text": "Clink your glasses, toast your lasses, set the table in a roar!"
+        },
+        {
+          "id": "old_mag_1846_565490.txt-312-31",
+          "text": "Says Mr. Jones \" As the children could not make use of books, and being the only teacher, I was compelled to throw the whole school into one (lass, and to teach them all together on the inthnt schoot plan."
+        },
+        {
+          "id": "old_mag_1851_555722.txt-216-7",
+          "text": "From her I learned to love \" lasses candy; \" from her I learned to bate Tom Jefferson."
+        },
+        {
+          "id": "old_nf_1859_749190.txt-1021-9",
+          "text": "(\" Thu mir zurecht, Bottgher, sonst lass ich dich hangen \")."
+        }
+      ]
+    }
+  ]
+}

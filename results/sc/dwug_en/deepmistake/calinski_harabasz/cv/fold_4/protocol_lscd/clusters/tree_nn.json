@@ -1,0 +1,816 @@
+{
+  "word": "tree_nn",
+  "n_clusters": 2,
+  "clusters": [
+    {
+      "id": 0,
+      "sentences": [
+        {
+          "id": "modern_fic_1966_1008.txt-127-39",
+          "text": "So, on one bank of the river grew the brier rose, a fragile thing, swaying on a slender stalk and looking at its pretty reflection in the water; and on the other a sturdy pine tree, well rooted against wind and storm."
+        },
+        {
+          "id": "modern_fic_1979_782021.txt-4577-6",
+          "text": "Marti's car crashed into a tree and then overturned for a last time, remaining on its back, the wheels spinning like they were part of a monster lottery"
+        },
+        {
+          "id": "modern_fic_1980_10663.txt-55-9",
+          "text": "They walked out of the flower-garden and stood under trees, looking on the valley."
+        },
+        {
+          "id": "modern_fic_1982_10699.txt-3505-4",
+          "text": "You ever notice that trees do everything to git attention we do, except walk?"
+        },
+        {
+          "id": "modern_fic_1985_10734.txt-13281-7",
+          "text": "They'll have used up all the trees making their tons of wastepaper. \""
+        },
+        {
+          "id": "modern_fic_1986_10739.txt-4192-2",
+          "text": "behind a tree, the lever off and counting before the first barrage ripped into it."
+        },
+        {
+          "id": "modern_fic_1986_10746.txt-369-25",
+          "text": "Some of the cobbles there seemed to be covered with moss of different colors, which birds were carrying strand by strand up into the trees."
+        },
+        {
+          "id": "modern_fic_1993_25011.txt-2130-12",
+          "text": "Morning found them in a rich country with rows of stately 1 trees along the banks."
+        },
+        {
+          "id": "modern_fic_2001_27768.txt-138-23",
+          "text": "A home, like my mother's, that would come alive at Christmas with a roaring fire and a tall, sparkling tree."
+        },
+        {
+          "id": "modern_mag_1962_133963.txt-63-22",
+          "text": "Not only is it the season of the equinox, but already the fresh chill gradient winds of autumn have tinted the trees of Newport."
+        },
+        {
+          "id": "modern_mag_1967_431741.txt-90-5",
+          "text": "Once a carefree tomboy climbing trees and riding horseback on her father's farm, now that she's famous she's imprisoned by a paralyzing self-consciousness which makes a public appearance, or even a shopping trip, something of an ordeal."
+        },
+        {
+          "id": "modern_mag_1977_490796.txt-116-13",
+          "text": "There were no birds, but we kept an eye out for the trees, the rocks, and the rills."
+        },
+        {
+          "id": "modern_mag_1996_383581.txt-42-34",
+          "text": "At almost the same time Mackintosh was designing wroughtiron versions of the Glasgow coat of arms for the nearly completed Glasgow School of Art, where the same motif of a bird in a tree predominated."
+        },
+        {
+          "id": "modern_mag_2001_413864.txt-165-22",
+          "text": "The sloping bajadas are studded with forests of towering saguaro cacti, and the washes are lined with palo verde and mesquite trees."
+        },
+        {
+          "id": "modern_mag_2007_390031.txt-138-5",
+          "text": "He sat propped against a tree, his legs splayed before him, telling his story: he was infected six years ago, while planting coffee near the river; the itching kept him from sleeping; that, in turn, kept him from working; one of his children took care of him; he could still see well enough to get around, but he worried that his eyesight would get worse. \""
+        },
+        {
+          "id": "old_fic_1827_7168.txt-303-74",
+          "text": "that at the grand festival of St. Nicholas, which might perhaps assimilate to a twenty-fifth of November dinner of our own modern Corporation, that not only the Chief Scout, but the lordly and substantial burgomasters, and the well fed Schepens of the honest city of Nieuw Amsterdam, or New-York, all appeared arrayed in certain calico morning gowns, which were adorned in lieu of bloemates, with orange trees and singing birds: the which material, had formed part of the cargo of a Spanish galleon which Kid had lately captured, and openly sent into the bay, consigned, as usual in these cases to some respectable trading firm; much in a like manner as our late uncommissioned privateer captures of the ships of a friendly nation; and for which an agent of the original owners had instituted a suit of recovery before the above mentioned Scout, who acted as Judge, together with his other municipal capacities; and as might be expected, the said suit shortly after the aforesaid festival of St. Nicholas, was decided"
+        },
+        {
+          "id": "old_fic_1836_7111.txt-1882-14",
+          "text": "If I was superstitious, \" said Thodore, as, emerging from the trees near the margin of the bayou, they came in full view of the largest mound, \" I should believe that the sun -- which it is said the Indians worshipped -- in reproof of our unbelief of his divinity, and detestation to the truth of their religion, has kindled a flame upon the summit of the Temple. \""
+        },
+        {
+          "id": "old_fic_1844_7189.txt-2280-26",
+          "text": "you, Loretta, that last night, just about dark, as I was walking near you cottage on the hill, with a beech tree on one side, and a chestnut on the other -- \" \" What! \""
+        },
+        {
+          "id": "old_fic_1851_3336.txt-2841-13",
+          "text": "He would have followed her, but stumbling against the root of a tree, before he could recover himself she was at the outskirts of the wood, in sight of the farm-house, and though he might overtake he could not detain her."
+        },
+        {
+          "id": "old_fic_1853_2409.txt-622-6",
+          "text": "They are felling the nations like trees on their way, And"
+        },
+        {
+          "id": "old_fic_1854_9218.txt-0-21",
+          "text": "@@2219 Page image Hic Fructus Virtutis; Clifton Waller Barrett - Paste-Down Endpaper with Bookplate: heraldry figure with a green tree on top and shield below."
+        },
+        {
+          "id": "old_mag_1854_566452.txt-328-15",
+          "text": "There they dug, and enriched, and watered, just as every cultivator of trees or grain gives his chief care"
+        },
+        {
+          "id": "old_nf_1841_747926.txt-2077-1",
+          "text": "The tree is but little cultivated among us, though highly deserving more extensive favor, both on account of its value and beauty."
+        },
+        {
+          "id": "old_nf_1841_747926.txt-2442-3",
+          "text": "The North American trees composing the genus Magnolia ire certainly among the most splendid productions of the forests in any temperate climate; and when we consider /z/ the size and fragrance of their blossoms, or the beauty of their large and noble foliage, we may be allowed to doubt whether there is a more magnificent and showy genus of deciduous trees in the world."
+        },
+        {
+          "id": "old_nf_1845_747928.txt-712-7",
+          "text": "The season best adapted for transplanting fruit trees is a matter open to much difference of opinion among horticulturists; a difference founded mainly on experience, but without taking into account variation of climate and soils, two very important circumstances in all operations of this kind."
+        },
+        {
+          "id": "old_nf_1849_755107.txt-2709-2",
+          "text": "Finding no tree on the strand, we stuck our oars in the ground, and to these we fastened our hammocks."
+        },
+        {
+          "id": "old_nf_1851_747930.txt-4018-1",
+          "text": "Our tree is commonly found on a rather dry, sandy"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "sentences": [
+        {
+          "id": "modern_fic_1960_10392.txt-1475-22",
+          "text": "It is noontime of a spring day; this you can tell from the light, and from the blooming flowerboxes and trees on the penthouse roofs of the buildings behind, and by the cool spring dress Celia is wearing."
+        },
+        {
+          "id": "modern_fic_1960_24500.txt-1125-15",
+          "text": "SWITCHBOARD ROOM - DAY Perched on top of the switchboard is a small decorated Christmas tree, and the operators are dispensing holiday greetings to all callers."
+        },
+        {
+          "id": "modern_fic_1960_5137.txt-2608-29",
+          "text": "His face was stricken in the light of a new flare, and as suddenly as he had come to object, he left, plunged back under the trees to seek his people, be beside them, comforting them when disaster struck down."
+        },
+        {
+          "id": "modern_fic_1961_23773.txt-58-21",
+          "text": "His black Jaguar crouched off the road a bit down the hill, and he sat between it and half-a-dozen plum trees."
+        },
+        {
+          "id": "modern_fic_1962_23786.txt-2607-16",
+          "text": "Still, it Look much longer than she hoped, and when she broke out of trees at last on the edge of the grove with the naked road on her left and Mr. Isaac's before her, she all but ran the hundred yards to the porch, and the pounding of her feet on dead earth flushed waves of screaming guineas into pecan limbs."
+        },
+        {
+          "id": "modern_fic_1963_780073.txt-2749-16",
+          "text": "If they were made by a rope holding a boat, there ought to be another tree with similar marks at the other end of the cove."
+        },
+        {
+          "id": "modern_fic_1965_10456.txt-3603-11",
+          "text": "They were five, standing togetherp239just at the edge of the trees with grinning faces."
+        },
+        {
+          "id": "modern_fic_1965_10458.txt-3606-5",
+          "text": "On the way, the trees did not burn."
+        },
+        {
+          "id": "modern_fic_1966_10473.txt-4995-32",
+          "text": "Taking instead of giving; and by his taking, leaving me light as a feather, about to float in a minute to the top of the world's highest Christmas tree."
+        },
+        {
+          "id": "modern_fic_1967_10494.txt-3896-11",
+          "text": "That's her cabin -- just there, beyond the spruce trees. \""
+        },
+        {
+          "id": "modern_fic_1971_10537.txt-1750-14",
+          "text": "My assurance had faltered halfway through the year, and by the time the trees in the tiny park were in dusty leaf I was certain it wasn't going to work."
+        },
+        {
+          "id": "modern_fic_1973_10570.txt-3739-10",
+          "text": "I looked up at the Bandung's palms, a tree I no longer associate with fun, so as to avoid looking at the top of the stockade wall enclosing the garden; on top of the wall glass shards were planted to discourage intruders and the sight of these bristling never failed to make my pecker ache."
+        },
+        {
+          "id": "modern_fic_1973_780108.txt-4382-6",
+          "text": "She touched one of the cactus trees, outlining it slowly with her finger."
+        },
+        {
+          "id": "modern_fic_1974_13258.txt-455-7",
+          "text": "I don't think we need lemon trees A lemon tree's a waste When artificial lemonade Has such a lovely taste We've got Sodium bicarbonate Fumaric acid We'll try Not to get The measurement wrong It's all Calcium Disodium Propylene Glycol In the Artificial Lemonade Song We could put in a banana That would really hit the spot But I tore up my banana tree To build a parking lot We could sweeten it"
+        },
+        {
+          "id": "modern_fic_1975_10600.txt-1237-18",
+          "text": "The nearest he'd seen to anything like this was a line of maple and beech and hickory trees after the first hard frost had hit them."
+        },
+        {
+          "id": "modern_fic_1976_14235.txt-3398-25",
+          "text": "Then they would slowly make their way through the thick woods -- HORTON And in the thick woods we could fight them Indian fashion from tree to tree."
+        },
+        {
+          "id": "modern_fic_1977_10623.txt-3197-9",
+          "text": "They are headed toward the blackened, ruined oak tree at the edge of the woods."
+        },
+        {
+          "id": "modern_fic_1979_780155.txt-3663-8",
+          "text": "Stepping quickly behind the bole of a large tree, Bull waited in silence."
+        },
+        {
+          "id": "modern_fic_1980_782023.txt-2096-18",
+          "text": "I don't care if you shoot the damn thing upside down, sideways or hanging from a tree -- it's up to you to do it!"
+        },
+        {
+          "id": "modern_fic_1981_782025.txt-2226-26",
+          "text": "Then Franny and I had to restrain Frank from going on and on with his banging cymbals; it seemed that the sound might kill the trees and drive small animals from the forest."
+        },
+        {
+          "id": "modern_fic_1982_13389.txt-1772-18",
+          "text": "KAREN I was walking along the beach and I passed this guy crouched in the crook of a tree, lit just a little by the moonlight."
+        },
+        {
+          "id": "modern_fic_1982_23959.txt-129-50",
+          "text": "I N THE WOODS near the road he and Mark lay face down in the shadow of trees and looked through branches and brown needles of a larger fallen branch of pine; Mark had dragged it from deeper in the woods, where their bicycles were chained to a tree."
+        },
+        {
+          "id": "modern_fic_1983_10707.txt-3756-9",
+          "text": "Soon they were under the cover of the tall trees, and the footing improved, allowing them to climb the slope without sliding or grabbing for branches."
+        },
+        {
+          "id": "modern_fic_1983_10710.txt-1940-6",
+          "text": "Peter moved slightly away from the tree, just enough to expose his presence, and then (prickly popped back."
+        },
+        {
+          "id": "modern_fic_1987_10756.txt-5694-8",
+          "text": "terrain changed immediately, from the green and trees of the other side to red rock, sand, and low scrub."
+        },
+        {
+          "id": "modern_fic_1987_16030.txt-1901-11",
+          "text": "SEEING: THE HUNTER, clinging to a side of a tree, flushed bright crimson."
+        },
+        {
+          "id": "modern_fic_1988_10770.txt-4481-5",
+          "text": "From the silhouettes of the trees lining the lake-like expanse of the river, Jason could gauge their speed."
+        },
+        {
+          "id": "modern_fic_1988_13311.txt-1418-5",
+          "text": "ELIJAH I will build a tree for my crow."
+        },
+        {
+          "id": "modern_fic_1989_5359.txt-6480-27",
+          "text": "Looking off to his right, he saw fragments of wall bounding the edge of a field, and a broken, fluted column rising among olive trees, quiet reminders that the city had once extended into these fields and beyond."
+        },
+        {
+          "id": "modern_fic_1989_782038.txt-2623-13",
+          "text": "The men ate quietly, then returned to the whiskey under the shade tree."
+        },
+        {
+          "id": "modern_fic_1990_13677.txt-691-5",
+          "text": "KOSHCHEI enters carrying a small tree with golden fruit."
+        },
+        {
+          "id": "modern_fic_1990_13677.txt-711-9",
+          "text": "IRENKA Well it would have been impossible if the trees had still been standing."
+        },
+        {
+          "id": "modern_fic_1990_53204.txt-243-10",
+          "text": "Directly outside the window, a squirrel on an oak tree shook the Spanish moss, which resembled gray rags, and the classroom resounded with the dry little noise."
+        },
+        {
+          "id": "modern_fic_1991_53459.txt-84-28",
+          "text": "The town of Fitzgerald was founded as a refuge for soldiers from both sides, and the streets were named either for generals, battleships, or southern trees and rivers."
+        },
+        {
+          "id": "modern_fic_1992_40397.txt-88-4",
+          "text": "The manager wanted the trees for a display at the main entrance, and Carl had to talk him out of organics."
+        },
+        {
+          "id": "modern_fic_1992_53515.txt-136-45",
+          "text": "And the chinaberry tree that gives no shade, not even a moon shadow -- when it put on berries its leaves gave all their strength, and now they hang weakly among the wrinkled berries, things about to evaporate; and beneath the tree is dust, the roots scratched bare by the dog, and now the dog lies among the feathery rootless imagining that he is cooling himself, but he pants, and he is as hot and dry as the galvanized chain that attaches him to the tree."
+        },
+        {
+          "id": "modern_fic_1993_1040085.txt-3801-15",
+          "text": "Shadows from the fire leaped and danced like pagan phantoms among the black trunks of trees."
+        },
+        {
+          "id": "modern_fic_1993_1040090.txt-3862-7",
+          "text": "Bulkin stopped next to one of the trees and pasted a yellow poster onto its trunk."
+        },
+        {
+          "id": "modern_fic_1993_16196.txt-1845-17",
+          "text": "LIVING ROOM, CAROLINE 'S HOUSE - (SAME TIME) The light of a silver Christmas tree - Michael is sound asleep in front of the TV, thumb in his mouth, on the couch in his pajamas, ski hat and coat."
+        },
+        {
+          "id": "modern_fic_1993_25015.txt-1504-20",
+          "text": "There were no mushrooms after all, only a small boy, curled up asleep at the base of a tree, his grimy face streaked with tears."
+        },
+        {
+          "id": "modern_fic_1993_25027.txt-2573-3",
+          "text": "Where there were trees I slid from one to the other on the downhill side of them."
+        },
+        {
+          "id": "modern_fic_1994_41229.txt-259-54",
+          "text": "The rest of the letter was about the Raniers ' home out in the country, and how much Natalie wished we had a house, and how sometimes she thought that I was not the best man in the world but that someday we were going to live in a house with a tree in the yard."
+        },
+        {
+          "id": "modern_fic_1997_42212.txt-874-3",
+          "text": "I stumbled from tree to tree, saw a flash, lost it again."
+        },
+        {
+          "id": "modern_fic_1997_42230.txt-691-13",
+          "text": "Tarrant and Muskie started down the hill, and as they entered the trees Tarrant stopped and looked back."
+        },
+        {
+          "id": "modern_fic_1997_42318.txt-0-28",
+          "text": "@@4318 I was three, no more, when I spotted for the first time the paleness of his shirt moving like some small ghost against the darkening trees."
+        },
+        {
+          "id": "modern_fic_1998_44220.txt-236-8",
+          "text": "The brittle twigs of a large, bare tree scratched at the sky."
+        },
+        {
+          "id": "modern_fic_2000_38702.txt-269-12",
+          "text": "There was a half-mile of shoals and then the big pool and tree swing."
+        },
+        {
+          "id": "modern_fic_2002_46745.txt-1334-12",
+          "text": "forestlike fringe ahead was the grass at the foot of a cashew tree."
+        },
+        {
+          "id": "modern_fic_2002_47054.txt-391-39",
+          "text": "At first the sound seemed generalized, permeating the air, but I determined that it came from the creek, more specifically from that portion of the creek that disappeared into a thicket of squat shrubs and crooked trees brandishing new, pale -- green leaves."
+        },
+        {
+          "id": "modern_fic_2003_47913.txt-16-32",
+          "text": "I stood there in the heat, staring past the car at the road, two narrow gravel ruts and a hummock of wire grass winding away through a sunshot dapple of tree and scrub."
+        },
+        {
+          "id": "modern_fic_2004_30237.txt-24-9",
+          "text": "As I'itoi was thinking these things under the cottonwood trees, he looked up."
+        },
+        {
+          "id": "modern_fic_2005_31446.txt-103-18",
+          "text": "That first day, Marcie moved them farther and farther apart as the sun angled down through the trees, and I wouldn't back down, even when the wrinkled skin between my toes bled."
+        },
+        {
+          "id": "modern_fic_2005_32824.txt-126-40",
+          "text": "Boys with missing teeth, their faces smeared with red Popsicle goo, their beady little eyes laughing at her as they lured her behind their house to see their new \" puppy \" and then lassoed her to a tree and hung her upside down."
+        },
+        {
+          "id": "modern_fic_2005_780519.txt-398-22",
+          "text": "TREEHOUSE - SAME TIME We watch over Kenny's shoulder as Leonard falls from the treehouse, smacks his head on the tree trunk and comes to a crash upon some rocks."
+        },
+        {
+          "id": "modern_fic_2006_51660.txt-30-13",
+          "text": "White and pink roses and drooping tangled vines and espaliered pear and peach trees heavy with hard young fruit draped the great stone garden wall all the way to the dark back corners."
+        },
+        {
+          "id": "modern_fic_2007_33569.txt-46-5",
+          "text": "on dry earth, small trees with dark leaves and clumps of green fruit -- olive trees, said his own voice in his head -- a dusty road and soldiers marching in puttees and canvas webbing, bolt-action rifles slung from their shoulders. \""
+        },
+        {
+          "id": "modern_fic_2007_52474.txt-242-17",
+          "text": "Outside, the rain continues to fall and Lisa can see the black-green wetness of the oak trees surrounding the Jewish cemetery, the canopy swishing against the sky, and she wonders if it is true that the unbaptized are locked out of heaven."
+        },
+        {
+          "id": "modern_fic_2008_36175.txt-25-2",
+          "text": "Even the trees looked uncomfortable, naked and embarrassed, as if they were all simultaneously having that dream in which you look down and realize you've forgotten to put on your clothes."
+        },
+        {
+          "id": "modern_fic_2009_36385.txt-165-12",
+          "text": "As he thought this, something moved way back there among the trees where sunlight angled in wavery golden patches surrounded by green gloom."
+        },
+        {
+          "id": "modern_mag_1961_246105.txt-22-37",
+          "text": "Churches go up in flames, men are set on fire in their castles, tiny firing squads claim victim after victim, a man is broken on a wheel, 21 corpses hang from a single tree."
+        },
+        {
+          "id": "modern_mag_1967_490647.txt-48-14",
+          "text": "The great hulk of the mountain soared above us, pale brownish-purple with hare trees and underbrush, which in places, high up, turned to rock, crinkled like elephant hide; at the peak, more than a thousand feet over our head, the sun was a light-colored disc in haze, almost touching the tiny, fuzzy treetops."
+        },
+        {
+          "id": "modern_mag_1972_431829.txt-43-11",
+          "text": "At Tucson in 1901, A. E. Douglass began looking at trees for old weather records."
+        },
+        {
+          "id": "modern_mag_1973_431867.txt-184-0",
+          "text": "trees of any sort, particularly during a storm."
+        },
+        {
+          "id": "modern_mag_1974_316565.txt-1-41",
+          "text": "To put some of the comfort back into apple consumption, two young California entrepreneurs are providing a rent-a-tree service that allows city dwellers to raise all the fruit they can possibly eat and also enjoy the pristine pleasures of watching trees grow, blossom and yield."
+        },
+        {
+          "id": "modern_mag_1987_335053.txt-1-46",
+          "text": "But there is no charge for rent or utilities, and if the location is less than ideal -- beneath an overpass at the edge of a San Francisco parking lot -- at least the two snug, waterproof plywood structures are nestled among fragrant eucalyptus trees."
+        },
+        {
+          "id": "modern_mag_1988_337446.txt-8-3",
+          "text": "the concrete palm trees out front, a favorite drink is root-beer schnapps."
+        },
+        {
+          "id": "modern_mag_1990_420777.txt-5-22",
+          "text": "Sandford Road is a busy Dublin thoroughfare, but its early-19th-century detached villas are set back from the street and surrounded by trees, creating an almost country-style landscape."
+        },
+        {
+          "id": "modern_mag_1992_396817.txt-96-55",
+          "text": "CMH clients undergo an extensive safety orientation, including the use of avalanche transceivers (to help pinpoint rescues should someone become buried), helicopter protocol, actual trial avalanche searches, and avoiding naturally occurring hazards like crevasses, cornices, and tree wells (deep pits that form at the base of trees when the snow accumulates on their branches)."
+        },
+        {
+          "id": "modern_mag_1993_409306.txt-20-29",
+          "text": "At some point in its travels from its birthplace in the Malay Archipelago, perhaps many times, the breadfruit was cloned from the rootstock of specially desirable seedless trees."
+        },
+        {
+          "id": "modern_mag_1995_415114.txt-72-44",
+          "text": "PILCHUCK GLASS SCHOOL In 1971, with the support of patrons Anne Gould Hauberg and John H. Hauberg, and a $2,000 grant from the Union of Independent Colleges of Art, the glass artist Dale Chihuly founded the Pilchuck Glass School on a tree farm in Stanwood, Washington, an hour's drive north of Seattle. \""
+        },
+        {
+          "id": "modern_mag_1995_420946.txt-118-17",
+          "text": "You don't sink into the snow as much, but I still find places in the trees where I hit large pockets of snow that fly up face shots And you still get the same floating sensation that is the raison d'tre of powder skiing."
+        },
+        {
+          "id": "modern_mag_1998_400662.txt-36-34",
+          "text": "Three days later, when the backs of his legs were aflame with the rash and massive blisters, he realized that once upon a time, poison ivy vines had thrived on the tree's bark, leaving behind-you guessed it-lots of urushiol."
+        },
+        {
+          "id": "modern_mag_2000_369093.txt-6-26",
+          "text": "Some of the sequoias Clinton preserved in the 328,000-acre monument are only the third generation since the last Ice Age, part of a family of trees that has endured fires, earthquakes, storms and every change of political leadership since human history began. \""
+        },
+        {
+          "id": "modern_mag_2000_401771.txt-55-20",
+          "text": "Since our ammunition boxes are still full, we have targets to strafe -- long wooden buildings surrounded by palm trees."
+        },
+        {
+          "id": "modern_mag_2001_417542.txt-58-33",
+          "text": "A growing number of businesses now manufacture furniture made from plantation woods-even rare tropical varieties like teak and mahogany-that aren't from forests but from well-managed farms with the sole purpose of raising trees for lumber."
+        },
+        {
+          "id": "modern_mag_2001_417542.txt-66-6",
+          "text": "Scientists have found that the young trees on plantation farms absorb more carbon dioxide from the atmosphere than older forests; so plantation forests help combat the greenhouse effect."
+        },
+        {
+          "id": "modern_mag_2002_385274.txt-73-20",
+          "text": "FOCUS ON THE SMALL THINGS Use a camera to search for and capture signs of springa tiny bud on a tree branch or the hint of a purple crocus."
+        },
+        {
+          "id": "modern_news_1994_620109.txt-17-17",
+          "text": "The next two to four weeks is the optimal time to walk among the gold or red trees and reddening grapevines."
+        },
+        {
+          "id": "modern_news_2002_603921.txt-36-47",
+          "text": "A partial list of her tree themes: mice, Winnie the Pooh, patriotic, Disney, The Wizard of Oz, outer space, folk art, religious, Peanuts, copper, fairies, birds, Eskimos and polar bears, three blown glass trees, four angel trees, three Santa trees, two snowman trees and four animal trees."
+        },
+        {
+          "id": "modern_news_2005_604814.txt-2-2",
+          "text": "As Christmas trees glow and snow falls outside the playhouse's massive windows, night after night Dick Boyd stands in a receiving line as people wait to shake his hand, get his autograph and, yes, give him a hug."
+        },
+        {
+          "id": "modern_news_2006_623963.txt-66-14",
+          "text": "Another time we were hiking when we saw two small cubs run up a tree just like in the movies."
+        },
+        {
+          "id": "modern_nf_1963_774222.txt-1849-38",
+          "text": "The expert map reader, like the expert score reader, may be able to tell fairly exactly what sort of country he may expect to find, but he can not possibly experience the beauty of the trees, the intense emotion of a wonderful"
+        },
+        {
+          "id": "modern_nf_1973_773920.txt-539-1",
+          "text": "The tree could not know of its coming fall, although man could discover it if he happened to examine it."
+        },
+        {
+          "id": "modern_nf_1982_774241.txt-290-5",
+          "text": "The fruits of the forbidden tree are, of course, death."
+        },
+        {
+          "id": "modern_nf_1998_774048.txt-896-20",
+          "text": "The funnel-shaped fruit-bodies are a pale to golden yellow color and always come up from the ground, never from tree stumps or roots."
+        },
+        {
+          "id": "old_fic_1822_7243.txt-2784-30",
+          "text": "Onward he toiled, sadly and doubtfully, frequently disturbed by some crackling above him, as the young panthers, snuffing his approach, leaped along from tree to tree, and rock to rock: and starting ever and anon, as if some creature of the upward element were at his elbow."
+        },
+        {
+          "id": "old_fic_1822_7243.txt-4765-23",
+          "text": "The last arrows, with scarlet plumage, flew upon the wind, toward the habitation of their enemy; and the circling trees around, seared by the whirled tomahawks, gave terrifying evidence to the kind of combat that was to follow -- no quarter?"
+        },
+        {
+          "id": "old_fic_1824_7037.txt-2407-4",
+          "text": "The foliage of the trees was every where so thickly interlaced, excepting the narrow footpath which opened before him, that scarcely a single ray of light could be discerned among the branches."
+        },
+        {
+          "id": "old_fic_1824_7278.txt-989-22",
+          "text": "The low murmurs of the little stream along which we rode -- the wind that sighed through the naked branches of the trees -- the rustling of the fallen leaves over which we passed, all seemed to speak a voice of warning to my fearful spirit. \""
+        },
+        {
+          "id": "old_fic_1831_8376.txt-4942-4",
+          "text": "The old trunks of trees rise round Like pillars in a church of old, And the wind fills them with a sound As if a bell were tolled."
+        },
+        {
+          "id": "old_fic_1832_7177.txt-2251-5",
+          "text": "This canine rabble surrounded the tree, and, with vain efforts, attempted to scale the trunk, or started towards"
+        },
+        {
+          "id": "old_fic_1833_7201.txt-717-24",
+          "text": "The sighing of the wind, as the branches rise and fall upon it, -- the occasional note of a bird among the trees, and the shifting of light and shade upon the tombs beneath, have a"
+        },
+        {
+          "id": "old_fic_1835_7014.txt-3380-18",
+          "text": "The refugee laughed, and at that moment Herman heard a noise on the bough of the oak tree, as of some animal rending away the bark; and looking up, he beheld what he had not before seen in the gloom, -- the body of the dead traitor swinging with a sort of jerking, convulsive motion, as if still alive."
+        },
+        {
+          "id": "old_fic_1835_7134.txt-934-27",
+          "text": "What a richness must clothe even the language of sermons composed in such pleasant shades -- the cool wind loaded with fragrance, leaping from among the trees upon the brow, and playing refreshingly among the hair!"
+        },
+        {
+          "id": "old_fic_1836_7040.txt-2834-40",
+          "text": "It sounded like the voice of Paralus in his youth, when we used to sing together, to please my grandfather, as he sat by the side of that little sheltered brook, over whose bright waters the trees embrace each other in silent love."
+        },
+        {
+          "id": "old_fic_1837_7452.txt-1377-7",
+          "text": "The winds were then harmonious in the trees, And jocund were the spirits of the air, That all night long upon the passing breeze Were wont to fondle with my tangled hair; And now, though still melodious, they are deep, And, like thy cadence, often make me sleep!"
+        },
+        {
+          "id": "old_fic_1837_8325.txt-1062-42",
+          "text": "Days of care Were meted to him, and long nights of grief Weigh'd out, and then that little, wailing one Went to her mother's bosom, and slept sweet ' Neath the cool branches of the Hopia- tree. '"
+        },
+        {
+          "id": "old_fic_1839_7335.txt-551-10",
+          "text": "Several rods, or shoots of that thus oddly consecrated tree, were accordingly selected, cut and carefully trimmed for the purpose."
+        },
+        {
+          "id": "old_fic_1839_7336.txt-168-16",
+          "text": "or two above that: the Red Coats need leveling a cursed sight more than the trees, at this crisis."
+        },
+        {
+          "id": "old_fic_1844_9118.txt-279-19",
+          "text": "It invites him to adorn his deformities, and not to cast them off by expansion, as the tree its bark."
+        },
+        {
+          "id": "old_fic_1845_7170.txt-3107-11",
+          "text": "As she was going on, suddenly issuing from behind a tree, appeared to her in her dream, the same lady who had talked with her after meeting, Miss Amy. \""
+        },
+        {
+          "id": "old_fic_1845_7170.txt-517-23",
+          "text": "The shadows of the forest vibrated and flickered on the yellow leaf-strewed earth and through the green underwood; the trunks of the trees shot up, in straight, rough, tapering stems clear through the branches into the sky."
+        },
+        {
+          "id": "old_fic_1846_4462.txt-2507-79",
+          "text": "house of Autronius upon the Quirinal, whither I sent thee to bid him to dinner the next day -- he shall confirm the tale -- when thou didst hear a cry of murder from the Plebeian graveyard on the Esquiline; and hurrying to the spot, didst see Arvina, with his freedman Thrasea bearing a torch, conceal a fresh bleeding body in a broken grave; and, hidden by the stem of a great tree thyself, didst hear him say, as he left the ground, ' That dog will tell no tales! '"
+        },
+        {
+          "id": "old_fic_1846_4464.txt-1775-9",
+          "text": "Bind me Hortensia, firmly, to yon chesnut tree, stout smith; but do not harm her."
+        },
+        {
+          "id": "old_fic_1846_544.txt-3430-5",
+          "text": "This mode of walking the tree is only practicable where the trunk declines considerably from the perpendicular."
+        },
+        {
+          "id": "old_fic_1846_7121.txt-989-51",
+          "text": "Leaving his faithful dog to guard his herd in the pass, the young mountaineer left the spot where they were collected together, and going a few steps along a ledge in the cliff-side, he came upon an open space, about which grew several clumps of wild olive trees."
+        },
+        {
+          "id": "old_fic_1847_8247.txt-115-11",
+          "text": "in these autumnal hours, When fairy colors deck the painted tree, When the vast woodlands seem a sea of flowers, Oh!"
+        },
+        {
+          "id": "old_fic_1848_7009.txt-3202-24",
+          "text": "Hastening to a little knob, which gave them a wide prospect in the direction of the sound, they looked carefully through the trees on each side of them, and great was their horror, when they saw Shoonshoone standing close by a thicket, his gun, which he had just discharged, by his side, and a huge bear with an angry howl rushing upon him."
+        },
+        {
+          "id": "old_fic_1848_7009.txt-3726-46",
+          "text": "In a few minutes from the time they halted, they had finished their preparations for passing the night here; the horses were loosed to graze and rest themselves, a hasty, rude shelter made from green boughs, which they cut from the trees, was prepared for Coquese, and a bed of the same, arranged for her."
+        },
+        {
+          "id": "old_fic_1848_7341.txt-544-26",
+          "text": "The country ain't much else but one everlastin turpentine plantation; and all one can see for miles, is millions upon millions of pine trees with the bark half off, and the white turpentine runnin down ther sides, and lookin like so many tall ghosts"
+        },
+        {
+          "id": "old_fic_1849_7006.txt-2460-3",
+          "text": "Flower passed the tree a few feet, and rested her delicate foot upon a stone of singular appearance. \""
+        },
+        {
+          "id": "old_fic_1849_7216.txt-4777-12",
+          "text": "All the stars laugh, When upward she looks: All the trees chat In their woody nooks: All the brooks sing; All the caves ring; All the buds blossom; All the boughs bound; All the birds carol; And leaves turn round, Where Yillah looks!"
+        },
+        {
+          "id": "old_fic_1849_7230.txt-1758-7",
+          "text": "He retreated a little space to a tree, while the savage standing at about six yards ' distance paused a moment with his tomahawk brandished high in air, and apparently deliberating in his own mind, whether he would close with him at once, or assail him from that distance."
+        },
+        {
+          "id": "old_fic_1849_7230.txt-2090-6",
+          "text": "The knight still leaned against the tree, lost in a vague but delicious reverie."
+        },
+        {
+          "id": "old_fic_1850_2535.txt-108-5",
+          "text": "Then he sits on a tree, and looks wise, as father says."
+        },
+        {
+          "id": "old_fic_1850_7171.txt-5572-3",
+          "text": "There should be trees in every street, without exception, -- trees about the Markets, trees in front of the shops, and on the docks, and shading the manufactories. \""
+        },
+        {
+          "id": "old_fic_1852_2751.txt-15085-31",
+          "text": "He turned off from the road, and led her back into the woods a little way, in the same path by which she had once gone hunting for a tree to cut down. \""
+        },
+        {
+          "id": "old_fic_1853_4303.txt-1570-30",
+          "text": "They dressed and broiled a few steaks of it, but hesitated to build a large fire, for fear that straggling Indians might see the smoke rising above the tree tops, which would direct them on their trail."
+        },
+        {
+          "id": "old_fic_1853_9040.txt-1302-23",
+          "text": "Of course, prosperity mated herself with him, and the fields grew broader and wider, and the shadows of the orchard trees covered all the ground, while flocks of cattle and sheep dotted the pastures."
+        },
+        {
+          "id": "old_fic_1853_9200.txt-1628-23",
+          "text": "As a simple-hearted clergyman read the service, the words sighed mournfully among the withered branches; and through the intervals of the trees came a glimpse of the broad Hudson, rolling in long waves, each wave tinted with the last glow of the departing day."
+        },
+        {
+          "id": "old_fic_1854_8328.txt-2813-25",
+          "text": "Dark caves, Worn by the foamy buffeting of waves; The blue abysses of the moaning sea, Where coral insects fashion dome and tree, And mermaids chant, by mortal eye unseen, And comb in sparry halls their tresses green; The broad savannah, where the bison strays"
+        },
+        {
+          "id": "old_fic_1855_2661.txt-1093-19",
+          "text": "the howling wind, like ten thousand furies, came crashing and roaring through the forest, bearing whole trees on its driving wings, while others bent low before the blasting swoop of its leveling might!"
+        },
+        {
+          "id": "old_fic_1855_2965.txt-2197-4",
+          "text": "forest, and the trees were as straight as an arrow, and so tall that their tops almost seemed among the clouds."
+        },
+        {
+          "id": "old_fic_1856_2470.txt-5940-8",
+          "text": "From hollows, in the butts of old trees, and recesses under projecting cliffs, he succeeded in finding enough dry fuel to start the fire anew, and soon it shot up a bright bold flame as before. \""
+        },
+        {
+          "id": "old_fic_1856_7889.txt-218-68",
+          "text": "; Around the fires of blazing pine, Through the dark wood that nightly shine Before the wigwam doors, appear A thousand flitting hosts, that scorch Their rash wings in the dazzling torch; Wayward and glittering in its flight, The fire-fly, now its light revealing, And now the transient glow concealing, Sparkles amid the shades of night, And through the trees, in fitful gleams, Of wandering mood, a spirit seems; In deep morass, the croaking throats Of frogs their dreary songs combine; From dismal swamps, the solemn notes Of owls in gloomy hootings join, And heard around, the hamlet nigh, Are fox's bark and panther's cry. \""
+        },
+        {
+          "id": "old_fic_1856_9779.txt-13013-23",
+          "text": "Among the pines, the scattered groups of our partisans were bivouacked, mostly without tent or covering, save that of the trees and the heavens."
+        },
+        {
+          "id": "old_fic_1856_9797.txt-6645-69",
+          "text": "The bill of exception states: That the slave Sam, in the indictment mentioned, of getting drunk, and dealing, as the slave confessed and alleged, with Henry and Stone, two of the witnesses for the Commonwealth, he caused him to be tied and punished in the presence of the said witnesses, with the exception of slight whipping with peach or apple tree switches, before the said witnesses arrived at the scene after they were sent for by the prisoner (who were present by request from the defendant), and of several slaves of the prisoner, in the manner and by the means charged in the indictment; and the said slave died under and from the infliction of the said punishment, in the presence of the prisoner, one of his slaves, and of one of the witnesses for the Commonwealth."
+        },
+        {
+          "id": "old_fic_1858_9231.txt-2377-16",
+          "text": "Here, you seat yourself, as friend with friend, in the shadow of green trees, under the loving skies."
+        },
+        {
+          "id": "old_fic_1859_270.txt-4005-9",
+          "text": "I did not speak to you of the great tree on what used to be the Colman farm, in Deerfield, simply because I had not seen it for many years, and did not like to trust my recollection."
+        },
+        {
+          "id": "old_fic_1860_615.txt-851-48",
+          "text": "In other portions of the grounds the stone-pines lifted their dense clump of branches upon a slender length of stem, so high that they looked like green islands in the air, flinging down a shadow upon the turf so far off that you hardly knew which tree had made it."
+        },
+        {
+          "id": "old_fic_1860_8118.txt-263-11",
+          "text": "of arms, The play of shine and shade on the trees as the supple boughs wag, The delight alone, or in the rush of the streets, or along the fields and hill-sides, The feeling of health, the full-noon trill, the song of me rising from bed and meeting the sun."
+        },
+        {
+          "id": "old_mag_1831_563912.txt-14-6",
+          "text": "Next you will see what magnificent trees may spring from an inconsiderable acorn, in a couple of live oaks, the emblems of strength and immortality."
+        },
+        {
+          "id": "old_mag_1832_554167.txt-84-20",
+          "text": "By ascertaining the time when these eggs are laid, and tying straw or matting round the trunk of the tree, its injuries are easily prevented."
+        },
+        {
+          "id": "old_mag_1837_554445.txt-162-10",
+          "text": "and find that the sound of the wind in the trees, and the singing of birds, are much more agreeable to our ears than the incessant barking of dogs and screaming of children."
+        },
+        {
+          "id": "old_mag_1838_554654.txt-295-19",
+          "text": "* We can not but think, therefore, that those, who would adorn their grounds with magnificent trees, should wait for the slow but sure operation of Time, in place of resorting to an expedient, which, to say nothing of its expense, requires to be tried by a long and general experience, and of the success of which we have as yet none but imperfect, and apparently not very impartial, statements."
+        },
+        {
+          "id": "old_mag_1848_555520.txt-129-53",
+          "text": "Let any one, if he does not already know hy daily observation and can not see it the moment he looks, measure fifty trees, and he will hardly find one that does not taper; not regularly, indeed, because many accidents give irregular and highly picturesque forms to trees; but he will find the law of the natural growth of a tree to he, that from the time it leaves the ground it begins to taper, and tapers out to its extremities."
+        },
+        {
+          "id": "old_mag_1851_504024.txt-369-23",
+          "text": "Although he could not force me to fulfill // the contract, he could blast my life in its bloom - wither the tree to the core-make a desert round it-poison the very atmosphere that gave it nourishment and strength -- and wait patientto see it die, leaf by leaf; and branch by branch, This was his devilish project."
+        },
+        {
+          "id": "old_mag_1851_525821.txt-26-21",
+          "text": "The intervening country is covered with dense fir forests, almost impenetrable to the midday sun, and obstructed with fallen trees, upturned roots and stumps, and a perfect jungle of undergrowth, through which the most energetic traveler can accomplish but ei *, ht or nine miles a day."
+        },
+        {
+          "id": "old_mag_1851_555720.txt-8-25",
+          "text": "In the long, narrow, flat island, covered with a few ill kept farms, with one or two mean houses and straggling trees, there certainly is nothing to attract notice; yet not a steamer passes it but that a group collects on the hurricane deck, to ask for the \" shrubbery which Shenstone might have envied, \" the \" music that might have charmed Calypso and her nymphs, \" and the \" wife who was said to be lovely even beyond her sex, and graced with"
+        },
+        {
+          "id": "old_mag_1858_566921.txt-158-3",
+          "text": "At the Big Trees, we enter a dell, quietly lapped in the mountains, where the majestic vegetable minarets are crowded, as in sonme city of pilgrimage; there to look up, for the first time, in silent awe of the mere life principle."
+        },
+        {
+          "id": "old_mag_1859_506406.txt-218-6",
+          "text": "The air grew dark, the trees swayed and roared in the rising blast, and there was every appearance of a sudden and furious storm."
+        },
+        {
+          "id": "old_nf_1833_747941.txt-1275-24",
+          "text": "/z/ Of the Poplar (Populus) there are about fifteen species described; but it is necessary to mention only two as timber trees: the white poplar, or spreading poplar (Populus canescens); and the Lombardy poplar, or poplar of the valley of the Po (Populus dilatata), which is spire-shaped, has its branches at very small angles with the trunk, and runs up to a great height."
+        },
+        {
+          "id": "old_nf_1833_747941.txt-1621-0",
+          "text": "tree grows so very slowly after attaining some size."
+        },
+        {
+          "id": "old_nf_1833_747941.txt-247-38",
+          "text": "more to impede the current of the water; while the accumulating moss, as the bog earth is called in Scotland, went on increasing and heaving up, so as to bury the trunks of the trees which it had destroyed."
+        },
+        {
+          "id": "old_nf_1833_747941.txt-839-20",
+          "text": "Scraping, an inferior species of turpentine, is the deposite made by the sap on the bark of the tree, as it trickles down into the box."
+        },
+        {
+          "id": "old_nf_1833_747941.txt-896-4",
+          "text": "to the great chesnut trees, through forests growing out of the lava, in several places almost impassable."
+        },
+        {
+          "id": "old_nf_1834_747621.txt-729-73",
+          "text": "If a landscape be drawn, and all finished with common colors, except the leaves of the trees, the grass and the sky, and the latter be finished with this sympathetic ink, and the two former with the adulterated solution just mentioned, the drawing will seem to be unfinished, and have a wintry appearance; but, upon being held to the fire, the grass and trees will become green, the sky blue, and the whole assume a rich and beautiful appearance."
+        },
+        {
+          "id": "old_nf_1836_749613.txt-1908-19",
+          "text": "When they alight, if on the ground, they cover whole acres at a time; if upon trees, the branches often break beneath their weight."
+        },
+        {
+          "id": "old_nf_1841_747926.txt-1510-45",
+          "text": "When large poplars of this kind are growing near a house of but moderate dimensions, they have a very bad effect by completely overpowering the building, without imparting any of that grandeur of character conferred by an old oak, or other spreading tree."
+        },
+        {
+          "id": "old_nf_1841_747926.txt-1956-10",
+          "text": "scenery; and the two latter are generally low spreading trees, valued entirely for the excellency of the fruit, or the suitableness of the."
+        },
+        {
+          "id": "old_nf_1841_747926.txt-950-14",
+          "text": "In the first case, suppose it is desired to form a group of trees,"
+        },
+        {
+          "id": "old_nf_1844_747892.txt-285-15",
+          "text": "The new sorts ' are all budded on the French Eglantine, and form small trees, that require to be kept free from the suckers which push up from the roots, or the graft would be impoverished and die."
+        },
+        {
+          "id": "old_nf_1844_762654.txt-2000-47",
+          "text": "I tried to argue him out of this notion; but, unfortunately, could find no tree without these characters -- some high up, and some lower down in the trunk -- some large and others small -- but still to be found on every tree."
+        },
+        {
+          "id": "old_nf_1845_747909.txt-1201-33",
+          "text": "XL), pass into one another with a force greater than the pressure of a column of water seven hundred feet high; so that, to elevate the sap in a tree, or to drive the blood in an animal, is an insignificant demand on the energy which this force could put forth."
+        },
+        {
+          "id": "old_nf_1845_747928.txt-48-41",
+          "text": "But when a graft is taken from one of these trees, and placed upon another stock, this grafted tree is found to lose its singular power of producing the same by seed, and becomes like all other worked trees"
+        },
+        {
+          "id": "old_nf_1845_747928.txt-861-20",
+          "text": "A /z/ due south slope, is, south of New- York, frequently found too warm for many fruit trees, in soils that are light and dry."
+        },
+        {
+          "id": "old_nf_1845_747928.txt-890-10",
+          "text": "/z/ For practical purposes, the numerous insects infesting fruit trees may be divided into four classes; 1st, those which for a time harbour in the ground and may be attacked in the soil; 2d, winged and other species, which may be attacked among"
+        },
+        {
+          "id": "old_nf_1847_754437.txt-2309-4",
+          "text": "The tops of the trees are far below, and as one looking down upon them hears the various cries and whistles of the birds come up, and marks the vultures wheeling round in aerial circles over the trees far below one's feet, then it is that you realise that at last the forest, with its world of foliage, has been surmounted."
+        },
+        {
+          "id": "old_nf_1848_747893.txt-2337-60",
+          "text": "Limestone, gravel, or coarse sand, with a small mixture of clay, /z/ forms a good soil for a vine; vegetable substances alone should be used to enrich it, such as the leaves and tendrils of the vine, the residue of the grape when pressed, and, failing these, the leaves of trees collected when green and formed into a compost with earth."
+        },
+        {
+          "id": "old_nf_1848_747893.txt-2604-12",
+          "text": "Another runs thirty feet on scaffolding, and then ascends an aspen tree, spreading over its branches to the height of about forty feet; the tree full of grapes."
+        },
+        {
+          "id": "old_nf_1849_747900.txt-1005-19",
+          "text": "Wielded in one hand it was useful in clearing away shrubs and branches, but almost harmless upon large trees, and the Indians,"
+        },
+        {
+          "id": "old_nf_1850_747863.txt-1002-17",
+          "text": "It is an excellent protection against mid-summer drouths, which so often prove destructive to newly transplanted trees, after they have appeared in leaf."
+        },
+        {
+          "id": "old_nf_1851_747930.txt-3604-60",
+          "text": "The great variety of rich colors, shades of scarlet, crimson, and purple, which the leaves and stems of this plant assume, and the situations in which we see it, climbing up the trunks and spreading along the branches of trees, covering walls and heaps of stones, forming natural festoons from tree to tree, or trained on the sides and along the piazzas of dwelling-houses, make it one of the conspicuous ornaments of the autumnal months."
+        },
+        {
+          "id": "old_nf_1851_747930.txt-4010-15",
+          "text": "Mr. Emerson says of it: \" The American Holly is a handsome, low tree, with nearly horizontal branches, and thorny, evergreen leaves."
+        },
+        {
+          "id": "old_nf_1851_758845.txt-1961-56",
+          "text": "Colonel Brady, who is active in daily perambulating the woods, to make himself acquainted with the environs, seeking, at the same time, the best places of finding wood and timber, for the purposes of his command, brought me a twig of the Sorbus Americana, a new species of tree to him, in the American forest, of which he asked me the name"
+        },
+        {
+          "id": "old_nf_1853_771859.txt-1580-12",
+          "text": "others assert it to be a resinous gum, exuding from certain trees, and collected by the bees like pollen."
+        },
+        {
+          "id": "old_nf_1856_769051.txt-2612-27",
+          "text": "He took a delicate piece from the small of the back, and was just on the point of putting it to his mouth, when a tree close by made a creaking noise."
+        },
+        {
+          "id": "old_nf_1856_769051.txt-3330-25",
+          "text": "The boy objected that his father was near, but he was at length prevailed on to go, and after they had fired the tree, and while they were busy killing or taking the squirrels, the hunter suddenly made his appearance, and clasped the strange boy in his arms."
+        },
+        {
+          "id": "old_nf_1858_747890.txt-1017-11",
+          "text": "The borders should be deeply tilled and rich, and the trees may be planted quite closely."
+        },
+        {
+          "id": "old_nf_1858_747890.txt-1633-3",
+          "text": "53 represents a tree, the lower part of which has ceased to grow, in consequence of over-fruiting."
+        },
+        {
+          "id": "old_nf_1858_747890.txt-177-42",
+          "text": "Guano affords an admirable liquid-dressing for trees (especially when exhibiting a languid growth) applied at the rate of an ounce or /z/ two in a pailful of water, distributed for a space of three or four feet around the tree."
+        },
+        {
+          "id": "old_nf_1858_747890.txt-792-5",
+          "text": "In selecting plants for pyramid trees, choose those that have branches or branch-spurs within a foot of the ground, and fairly distributed along the stem."
+        },
+        {
+          "id": "old_nf_1858_747890.txt-902-2",
+          "text": "As the tree increases in size, the roots near the body exhaust the soil of nutriment, and the absorbents, or fibrous spongioles, become hardened by age, and incapable of action."
+        }
+      ]
+    }
+  ]
+}
